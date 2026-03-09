@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 – Seite nicht gefunden | Amanthos Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-bg: #FAF8F5;
+      --color-primary: #2a2c25;
+      --color-accent: #9b4738;
+    }
+
+    body {
+      font-family: 'Proxima Nova', 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 480px;
+    }
+
+    .error-code {
+      font-family: 'Neue Haas Grotesk Display Pro', 'DM Sans', serif;
+      font-size: 8rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--color-primary);
+      opacity: 0.15;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-family: 'Neue Haas Grotesk Display Pro', 'DM Sans', serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #5A6A7A;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    a.back-link {
+      display: inline-block;
+      font-family: 'Proxima Nova', 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--color-accent);
+      text-decoration: none;
+      border: 1px solid var(--color-accent);
+      padding: 0.75rem 2rem;
+      border-radius: 2px;
+      letter-spacing: 0.05em;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    a.back-link:hover {
+      background-color: var(--color-accent);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="error-code">404</div>
+    <h1>Seite nicht gefunden</h1>
+    <p>Die angeforderte Seite existiert leider nicht.<br>Page not found.</p>
+    <a href="/" class="back-link">Zur&uuml;ck zur Startseite</a>
+  </div>
+</body>
+</html>

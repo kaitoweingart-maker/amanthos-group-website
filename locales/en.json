@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "title": "Amanthos Group | Real Estate, Hotels & Serviced Apartments",
+    "description": "Amanthos Group combines premium real estate, hotels, and serviced apartments in Switzerland and Germany. Quality, innovation, and hospitality."
+  },
+  "nav": {
+    "about": "About",
+    "celebration": "5 Years",
+    "hotels": "Hotels",
+    "real_estate": "Real Estate",
+    "serviced_apartments": "Serviced Apartments",
+    "partners": "Partners",
+    "team": "Team",
+    "contact": "Contact",
+    "skip": "Skip to content"
+  },
+  "hero": {
+    "title": "Excellence in Real Estate & Hospitality",
+    "subtitle": "Amanthos Group combines premium real estate, exceptional hotels, and modern serviced apartments in Switzerland and Germany.",
+    "cta_hotels": "Discover Our Hotels",
+    "cta_contact": "Get in Touch"
+  },
+  "about": {
+    "label": "Our Divisions",
+    "title": "Three Pillars of Excellence",
+    "subtitle": "Amanthos Group unites three complementary business areas under one roof – with a strong presence in Switzerland and Germany.",
+    "real_estate": {
+      "title": "Real Estate",
+      "description": "Strategic real estate development and management at prime locations in Switzerland and Germany. From acquisition to value creation.",
+      "detail_1": "International Expansion for Hotel Brands, Restaurants or Retail",
+      "detail_2": "Investment Advisory & Sales",
+      "detail_3": "Asset & Property Management",
+      "detail_4": "Real Estate Evaluation & Sales",
+      "cta": "Learn More"
+    },
+    "hotels": {
+      "title": "Hotels",
+      "description": "Unique hotels that combine Swiss hospitality with modern design. Each property tells its own story.",
+      "detail_1": "Prize by Radisson",
+      "detail_2": "Chalet Swiss Interlaken",
+      "detail_3": "Hotel Mulin by Amanthos",
+      "cta": "Discover Hotels"
+    },
+    "serviced_apartments": {
+      "title": "Serviced Apartments",
+      "description": "Fully furnished apartments with hotel comfort for business and long-stay guests. Flexible, comfortable, like home.",
+      "detail_1": "Amanthos Living Zurich Airport",
+      "detail_2": "Amanthos Living Nyon",
+      "detail_3": "Amanthos Living Solothurn",
+      "cta": "Amanthos Living"
+    }
+  },
+  "stats": {
+    "hotels": "Hotels under Operations",
+    "years": "Years of Accumulated Experience",
+    "rooms": "Rooms & Apartments",
+    "deals": "Deals Closed"
+  },
+  "celebration": {
+    "label": "Anniversary",
+    "title": "5 Years of Amanthos Group",
+    "subtitle": "Celebrate with us five years of passion, growth, and hospitality."
+  },
+  "hotels": {
+    "label": "Our Hotels",
+    "title": "Unique Hotels in Switzerland",
+    "subtitle": "Three exceptional properties, three unique experiences.",
+    "prize": {
+      "name": "Prize by Radisson",
+      "location": "Affoltern am Albis, Zurich",
+      "description": "A modern design hotel in collaboration with Radisson. Contemporary comfort meets first-class service in the Zurich region.",
+      "features": ["Design Rooms", "Meeting Rooms", "Central Location"]
+    },
+    "chalet": {
+      "name": "Chalet Swiss",
+      "location": "Interlaken, Berner Oberland",
+      "description": "Alpine charm in the heart of Interlaken. Traditional Swiss hospitality with views of the Eiger, Mönch, and Jungfrau.",
+      "features": ["Alpine Design", "Restaurant", "Panoramic Views", "Jungfrau Region"]
+    },
+    "mulin": {
+      "name": "Hotel Mulin by Amanthos",
+      "location": "Breil / Brigels, Graubünden",
+      "description": "A boutique hotel with a charming restaurant and bar. Culinary excellence and cozy atmosphere combined.",
+      "features": ["Boutique Rooms", "Bar & Lounge", "Events"]
+    },
+    "cta": "Visit Website"
+  },
+  "real_estate": {
+    "label": "Real Estate",
+    "title": "Real Estate",
+    "description": "Amanthos Group develops and manages properties at selected locations in Switzerland and Germany. Our focus is on sustainable value creation and long-term partnerships.",
+    "features": [
+      "International Expansion for Hotel Brands, Restaurants or Retail",
+      "Investment Advisory & Sales",
+      "Asset & Property Management",
+      "Real Estate Evaluation & Sales"
+    ],
+    "deals_label": "See some of our deals:"
+  },
+  "deals": {
+    "label": "Deals",
+    "title": "Amanthos Deals",
+    "switzerland": "Switzerland",
+    "germany": "Germany",
+    "ch": [
+      "Ayverdis – Lease at Bahnhofplatz, Zurich",
+      "Bachmann – Lease at Bleicherweg, Zurich",
+      "Decathlon – Lease at Interlaken",
+      "Fielmann – Lease at Interlaken",
+      "3 Leases in Amriville, Amriswil",
+      "Various deals with Bestseller, Place B and other retailers"
+    ],
+    "de": [
+      "121 residential units sold",
+      "9,500 m² property sold",
+      "SBB Deal – 1,300 m² at Zeppelin Carré, Stuttgart",
+      "Multi-family house deal",
+      "Logistics property sale in Bavaria",
+      "Contract for 4,400 m² warehouse space in Böblingen",
+      "Duvenbeck – 12,000 m²",
+      "2,100 m² fitness space, Stuttgart"
+    ]
+  },
+  "serviced_apartments": {
+    "label": "Serviced Apartments",
+    "title": "Living with Hotel Comfort",
+    "description": "Amanthos Living offers fully furnished serviced apartments in Zurich, Solothurn, and Nyon. Ideal for business travelers and long-stay guests who want more than a hotel room.",
+    "features": [
+      "Fully Equipped Kitchens",
+      "Weekly Cleaning",
+      "Flexible Check-in",
+      "Free Wi-Fi"
+    ],
+    "room_title": "Your Home Away from Home",
+    "room_description": "Spacious, light-filled apartments with everything you need. High-quality furnishings, fully equipped kitchen, and an ambiance that feels like home from the moment you arrive.",
+    "spec_1_value": "From 30m²",
+    "spec_1_label": "Living Space",
+    "spec_2_value": "From 1 Month",
+    "spec_2_label": "Minimum Stay",
+    "spec_3_value": "3 Cities",
+    "spec_3_label": "Locations",
+    "cta": "Visit amanthosliving.com"
+  },
+  "partners": {
+    "label": "Partners",
+    "title": "Strong Partnerships",
+    "subtitle": "We collaborate with leading brands to offer our guests the best experience."
+  },
+  "team": {
+    "label": "Our Team",
+    "title": "The People Behind Amanthos",
+    "subtitle": "A dedicated team with passion for real estate and hospitality in Switzerland and Germany."
+  },
+  "newsletter": {
+    "label": "Newsletter",
+    "title": "Stay Informed",
+    "subtitle": "Receive the latest news, offers, and insights from Amanthos Group directly to your inbox."
+  },
+  "footer": {
+    "brand_description": "Amanthos Group unites real estate, hotels, and serviced apartments under one roof – in Switzerland and Germany. Quality and hospitality are our values.",
+    "divisions_title": "Divisions",
+    "hotels_title": "Hotels",
+    "contact_title": "Contact",
+    "address": "Amanthos Group GmbH\nFrüemattli 1\n8906 Bonstetten, Switzerland",
+    "phone": "+41 56 200 18 18",
+    "email": "info@amanthos.com",
+    "copyright": "© 2026 Amanthos Group GmbH. All rights reserved.",
+    "imprint": "Imprint",
+    "privacy": "Privacy Policy"
+  },
+  "portal": {
+    "subtitle": "Explore the Amanthos World",
+    "enter": "Enter"
+  },
+  "cookie": {
+    "text": "This website uses cookies to provide you with the best experience.",
+    "accept": "Accept",
+    "more": "Learn more"
+  }
+}

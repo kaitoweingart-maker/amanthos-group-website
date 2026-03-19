@@ -672,13 +672,18 @@
   function animateCounter(el) {
     var target = parseInt(el.getAttribute('data-count'), 10);
     var suffix = el.getAttribute('data-suffix') || '';
+    var sep = el.getAttribute('data-separator') || '';
     var duration = 2000;
     var start = null;
+    function formatNum(n) {
+      if (!sep) return String(n);
+      return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, sep);
+    }
     function step(ts) {
       if (!start) start = ts;
       var p = Math.min((ts - start) / duration, 1);
       var eased = 1 - Math.pow(2, -10 * p);
-      el.textContent = Math.round(target * eased) + suffix;
+      el.textContent = formatNum(Math.round(target * eased)) + suffix;
       if (p < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
@@ -797,7 +802,7 @@
    * ============================================== */
   function init() {
     initPortal();
-    initPageRipple();
+    // initPageRipple(); // Removed: water ripple effect disabled
     hideDecorativeSVGs();
     initNavScroll();
     initHamburger();

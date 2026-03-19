@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amanthos Group | Immobilien, Hotels &amp; Serviced Apartments</title>
-  <meta name="description" content="Amanthos Group vereint erstklassige Immobilien, Hotels und Serviced Apartments in der Schweiz und Deutschland. Qualität, Innovation und Gastfreundschaft.">
-  <meta name="robots" content="index, follow">
+  <title>Amanthos Group | Immobilien, Hotels &amp; Serviced Apartments | Schweiz &amp; Deutschland</title>
+  <meta name="description" content="Amanthos Group – Ihr Partner für Immobilien, Investmentberatung, Hotels und Serviced Apartments in der Schweiz und Deutschland. Über 70 abgeschlossene Deals, 50'000+ m² vermittelte Fläche.">
+  <meta name="keywords" content="Immobilien Schweiz, Real Estate Germany, Hotels, Serviced Apartments, Investmentberatung, Asset Management, Amanthos Group, Zürich, Stuttgart, Interlaken">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="geo.region" content="CH">
+  <meta name="geo.region" content="DE">
+  <meta name="geo.placename" content="Greppen, Luzern">
+  <meta name="geo.position" content="47.0652;8.4452">
+  <meta name="ICBM" content="47.0652, 8.4452">
   <link rel="canonical" href="https://www.amanthos.com/">
   <link rel="alternate" hreflang="de" href="https://www.amanthos.com/">
   <link rel="alternate" hreflang="en" href="https://www.amanthos.com/?lang=en">
@@ -14,26 +20,31 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Amanthos Group | Immobilien, Hotels &amp; Serviced Apartments">
-  <meta property="og:description" content="Amanthos Group vereint erstklassige Immobilien, Hotels und Serviced Apartments in der Schweiz.">
+  <meta property="og:description" content="Amanthos Group – Immobilien, Investmentberatung, Hotels und Serviced Apartments in der Schweiz und Deutschland. Über 70 Deals, 50'000+ m² vermittelt.">
   <meta property="og:image" content="https://www.amanthos.com/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://www.amanthos.com/">
-  <meta property="og:site_name" content="Amanthos Group GmbH">
+  <meta property="og:site_name" content="Amanthos Group">
   <meta property="og:locale" content="de_CH">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta property="og:locale:alternate" content="en_US">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Amanthos Group | Immobilien, Hotels &amp; Serviced Apartments">
-  <meta name="twitter:description" content="Amanthos Group vereint erstklassige Immobilien, Hotels und Serviced Apartments in der Schweiz.">
+  <meta name="twitter:description" content="Amanthos Group – Immobilien, Investmentberatung, Hotels und Serviced Apartments in der Schweiz und Deutschland.">
   <meta name="twitter:image" content="https://www.amanthos.com/images/og-image.jpg">
 
   <!-- Favicon -->
   <link rel="icon" href="./images/logo-amanthos.png" type="image/png">
 
   <!-- Preload hero image for LCP -->
-  <link rel="preload" href="./images/hero.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="./images/hero-main.jpg" as="image" type="image/jpeg" fetchpriority="high">
   <link rel="preload" href="./css/style.css" as="style">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://api.mailbluster.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -49,8 +60,8 @@
     .nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.75rem 3.75rem;display:flex;align-items:center;justify-content:space-between;transition:all .3s ease}
     .nav.scrolled{background:rgba(255,255,255,.98);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(0,0,0,.08);padding:1.125rem 3.75rem}
     .nav-logo{display:flex;align-items:center;text-decoration:none}
-    .nav-logo img{height:64px;width:auto;filter:brightness(0) invert(1);transition:all .3s}
-    .nav.scrolled .nav-logo img{height:52px;filter:none}
+    .nav-logo img{height:36px;width:auto;filter:none;transition:all .3s}
+    .nav.scrolled .nav-logo img{height:30px;filter:none}
     .nav-links{display:flex;gap:2rem;align-items:center;list-style:none}
     .nav-links a{color:rgba(255,255,255,.9);text-decoration:none;font-size:.875rem;font-weight:400;letter-spacing:.04em;text-transform:uppercase;transition:color .3s}
     .nav.scrolled .nav-links a{color:var(--color-text)}
@@ -61,15 +72,21 @@
     .hero-bg{position:absolute;inset:0;z-index:-2}
     .hero-bg picture{display:block;width:100%;height:100%}
     .hero-bg img{width:100%;height:100%;object-fit:cover}
-    .hero::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.25) 40%,rgba(0,0,0,.65) 100%)}
+    .hero::before{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(255,255,255,.15) 0%,rgba(0,0,0,.1) 40%,rgba(0,0,0,.55) 100%)}
     .hero h1{font-family:var(--font-heading);font-size:clamp(2.5rem,5.5vw,4.5rem);color:#fff;font-weight:700;line-height:1.1;margin-bottom:1.5rem;max-width:900px;letter-spacing:-.02em}
     .hero-sub{font-size:clamp(1.0625rem,1.5vw,1.25rem);color:rgba(255,255,255,.85);font-weight:300;margin-bottom:2.5rem;max-width:600px;line-height:1.7}
+    .hero-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-body);font-size:.875rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;line-height:1;padding:16px 36px;border:2px solid transparent;border-radius:0;cursor:pointer;white-space:nowrap;text-decoration:none}
+    .btn-accent{background-color:var(--color-accent);color:#fff;border-color:var(--color-accent)}
+    .btn-white{background-color:#fff;color:var(--color-primary);border-color:#fff}
+    .btn-xl{padding:20px 48px;font-size:.9375rem}
+    .hero-logo{height:clamp(36px,5vw,52px);width:auto;margin-bottom:24px;opacity:1;filter:brightness(0) invert(1) drop-shadow(0 2px 20px rgba(0,0,0,.3))}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     .sr-only-focusable:focus{position:static;width:auto;height:auto;padding:.5rem 1rem;margin:0;overflow:visible;clip:auto;white-space:normal;background:var(--color-accent);color:#fff;z-index:1000;text-decoration:none;font-weight:600}
     @media(max-width:768px){
       .nav{padding:1rem 1.25rem}
-      .nav-logo img{height:48px}
-      .nav.scrolled .nav-logo img{height:40px}
+      .nav-logo img{height:36px}
+      .nav.scrolled .nav-logo img{height:32px}
       .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(42,44,37,.97);backdrop-filter:blur(16px);flex-direction:column;justify-content:center;align-items:center;gap:0;z-index:100;padding:2rem}
       .nav-links.open{display:flex}
       .nav-links li{width:100%;text-align:center;border-bottom:1px solid rgba(255,255,255,.08)}
@@ -157,13 +174,31 @@
         }
       },
       {
+        "@type": "RealEstateAgent",
+        "name": "Amanthos Services GmbH",
+        "url": "https://www.amanthos.com",
+        "telephone": "+4971120909575",
+        "description": "Immobilienberatung, Investmentberatung und Vermittlung in Deutschland",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Löffelstr. 22-24",
+          "addressLocality": "Stuttgart",
+          "postalCode": "70597",
+          "addressCountry": "DE"
+        },
+        "areaServed": ["DE", "CH"],
+        "knowsAbout": ["Commercial Real Estate", "Residential Real Estate", "Hotel Investment", "Retail Leasing", "Asset Management"]
+      },
+      {
         "@type": "LocalBusiness",
-        "name": "Amanthos Group GmbH",
+        "name": "Amanthos Holding AG",
         "url": "https://www.amanthos.com",
         "telephone": "+41562001818",
         "address": {
           "@type": "PostalAddress",
-          "addressLocality": "Oberwil-Lieli",
+          "streetAddress": "Früemattli 1",
+          "addressLocality": "Greppen",
+          "postalCode": "6404",
           "addressCountry": "CH"
         }
       }
@@ -172,33 +207,22 @@
   </script>
 </head>
 <body>
-  <!-- Portal Overlay — Explore the Amanthos World -->
-  <div id="amanthos-portal" class="portal-overlay">
-    <canvas id="portal-canvas"></canvas>
-    <div class="portal-content">
-      <img src="./images/logo-original.png" alt="Amanthos Group" class="portal-logo">
-      <div class="portal-divider"></div>
-      <p class="portal-subtitle" data-i18n="portal.subtitle">Explore the Amanthos World</p>
-      <button class="portal-enter" data-i18n="portal.enter">Enter</button>
-    </div>
-  </div>
-
   <!-- Skip Link -->
   <a href="#main" class="sr-only sr-only-focusable" data-i18n="nav.skip">Zum Inhalt springen</a>
 
   <!-- Navigation -->
   <nav class="nav" id="nav" role="navigation" aria-label="Hauptnavigation">
     <a href="/" class="nav-logo" aria-label="Amanthos Group - Startseite">
-      <img src="./images/Amanthos-Group-Primary-Logo-Horizontal.png" alt="Amanthos Group" width="200" height="55">
+      <img src="./images/logo-icon.png" alt="Amanthos Group" width="48" height="48">
+      <span class="nav-logo-text">Amanthos</span>
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#about" data-i18n="nav.about">Über uns</a></li>
-      <li><a href="#celebration" data-i18n="nav.celebration">5 Jahre</a></li>
-      <li><a href="#hotels" data-i18n="nav.hotels">Hotels</a></li>
       <li><a href="#real-estate" data-i18n="nav.real_estate">Immobilien</a></li>
-      <li><a href="#serviced-apartments" data-i18n="nav.serviced_apartments">Serviced Apartments</a></li>
-      <li><a href="#team" data-i18n="nav.team">Team</a></li>
       <li><a href="#partners" data-i18n="nav.partners">Partner</a></li>
+      <li><a href="#hotels" data-i18n="nav.hotels">Hotels</a></li>
+      <li><a href="#serviced-apartments" data-i18n="nav.serviced_apartments">Serviced Apartments</a></li>
+      <li><a href="#celebration" data-i18n="nav.celebration">5 Jahre</a></li>
+      <li><a href="#team" data-i18n="nav.team">Team</a></li>
       <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
       <li>
         <div class="lang-selector" id="langSelector" aria-label="Sprache wählen"></div>
@@ -216,17 +240,16 @@
     <section class="hero" id="hero">
       <div class="hero-bg">
         <picture>
-          <source srcset="./images/hero.webp" type="image/webp" media="(min-width: 769px)">
-          <source srcset="./images/hero-mobile.webp" type="image/webp" media="(max-width: 768px)">
-          <source srcset="./images/hero.jpg" type="image/jpeg" media="(min-width: 769px)">
-          <img src="./images/hero-mobile.jpg" alt="Amanthos Group - Erstklassige Hotels und Immobilien in der Schweiz" width="1920" height="1277" fetchpriority="high">
+          <source srcset="./images/hero-main.jpg" type="image/jpeg" media="(min-width: 769px)">
+          <source srcset="./images/hero-main.jpg" type="image/jpeg" media="(max-width: 768px)">
+          <img src="./images/hero-main.jpg" alt="Amanthos Group - Commercial Real Estate Services &amp; Investments" width="2400" height="1800" fetchpriority="high">
         </picture>
       </div>
-      <h1 data-text-reveal data-i18n="hero.title">Exzellenz in Immobilien &amp; Gastfreundschaft</h1>
-      <p class="hero-sub" data-i18n="hero.subtitle">Amanthos Group vereint erstklassige Immobilien, aussergewöhnliche Hotels und moderne Serviced Apartments in der Schweiz.</p>
+      <h1 data-text-reveal data-i18n="hero.title">Commercial Real Estate Services &amp; Investments</h1>
+      <p class="hero-sub" data-i18n="hero.subtitle">Amanthos Group – strategische Immobilienentwicklung, Investmentberatung und Hotelmanagement in der Schweiz und Deutschland.</p>
       <div class="hero-actions">
-        <a href="#hotels" class="btn btn-accent btn-xl" data-i18n="hero.cta_hotels">Unsere Hotels entdecken</a>
-        <a href="#team" class="btn btn-white btn-xl" data-i18n="hero.cta_contact">Kontakt aufnehmen</a>
+        <a href="#real-estate" class="btn btn-accent btn-xl" data-i18n="hero.cta_projects">Unsere Projekte</a>
+        <a href="#contact" class="btn btn-white btn-xl" data-i18n="hero.cta_contact">Kontakt aufnehmen</a>
       </div>
     </section>
 
@@ -316,9 +339,289 @@
             <span class="stat-label" data-i18n="stats.rooms">Zimmer & Apartments</span>
           </div>
           <div class="stat-item" data-stagger>
-            <span class="stat-number" data-count="50" data-suffix="+">0</span>
+            <span class="stat-number" data-count="70" data-suffix="+">0</span>
             <span class="stat-label" data-i18n="stats.deals">Abgeschlossene Deals</span>
           </div>
+          <div class="stat-item" data-stagger>
+            <span class="stat-number" data-count="50000" data-suffix="+ m²" data-separator="'">0</span>
+            <span class="stat-label" data-i18n="stats.area">Vermittelte Fläche (m²)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision / Mehrwert Section -->
+    <section class="section vision-section" id="vision">
+      <div class="container">
+        <div class="vision-layout" data-animate>
+          <div class="vision-quote">
+            <blockquote>
+              <p class="vision-quote-text" data-i18n="vision.quote">&laquo;Unser Anspruch ist es, bei jedem Prozessschritt echten Mehrwert zu schaffen &ndash; von der Akquisition über die Bewertung bis zum Abschluss. Wir denken nicht in Transaktionen, sondern in langfristigen Partnerschaften.&raquo;</p>
+              <footer class="vision-quote-author">
+                <img src="./images/team/bosko-trifunovic.webp" alt="Bosko Trifunovic" width="56" height="56" loading="lazy" class="vision-author-img">
+                <div>
+                  <strong>Bosko Trifunovic</strong>
+                  <span>CEO & Co-Founder, Amanthos Group</span>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+          <div class="vision-content">
+            <p class="section-label" data-i18n="vision.label">Unsere Mission</p>
+            <h2 class="section-title" data-i18n="vision.title">Mehrwert möglich machen</h2>
+            <p class="vision-description" data-i18n="vision.description">Als inhabergeführtes Unternehmen verbinden wir lokale Marktkenntnis mit internationaler Expertise. Wir begleiten unsere Kunden entlang der gesamten Wertschöpfungskette &ndash; strategisch, operativ und mit unternehmerischem Weitblick.</p>
+            <div class="vision-services">
+              <div class="vision-service">
+                <span class="vision-service-number">01</span>
+                <div>
+                  <h4 data-i18n="vision.service_1_title">Sourcing & Akquisition</h4>
+                  <p data-i18n="vision.service_1_desc">Off-Market-Zugang und strategische Identifikation von Investmentchancen in der Schweiz und Deutschland.</p>
+                </div>
+              </div>
+              <div class="vision-service">
+                <span class="vision-service-number">02</span>
+                <div>
+                  <h4 data-i18n="vision.service_2_title">Bewertung & Beratung</h4>
+                  <p data-i18n="vision.service_2_desc">Fundierte Marktanalysen, Immobilienbewertungen und massgeschneiderte Investmentstrategien.</p>
+                </div>
+              </div>
+              <div class="vision-service">
+                <span class="vision-service-number">03</span>
+                <div>
+                  <h4 data-i18n="vision.service_3_title">Transaktion & Vermittlung</h4>
+                  <p data-i18n="vision.service_3_desc">Professionelle Abwicklung von Kauf, Verkauf und Vermietung &ndash; diskret, effizient und ergebnisorientiert.</p>
+                </div>
+              </div>
+              <div class="vision-service">
+                <span class="vision-service-number">04</span>
+                <div>
+                  <h4 data-i18n="vision.service_4_title">Asset Management</h4>
+                  <p data-i18n="vision.service_4_desc">Aktive Wertschöpfung durch operatives Management, Repositionierung und nachhaltige Wertsteigerung.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Real Estate Section -->
+    <section class="section section-alt" id="real-estate">
+      <div class="container">
+        <!-- RE Header -->
+        <div class="re-header" data-animate>
+          <p class="section-label" data-i18n="real_estate.label">Immobilien</p>
+          <h2 class="section-title" data-text-reveal data-i18n="real_estate.title">Real Estate Advisory &amp; Investment</h2>
+          <p class="section-subtitle" data-i18n="real_estate.description">Wir sind nicht nur Berater &ndash; wir sind Unternehmer. Amanthos vereint tiefes Marktverständnis mit operativer Exzellenz, um nachhaltigen Mehrwert über den gesamten Immobilienzyklus zu schaffen.</p>
+        </div>
+
+        <!-- Asset Classes -->
+        <div class="re-sectors" data-stagger-parent>
+          <div class="re-sector" data-stagger>
+            <div class="re-sector-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="12" width="24" height="16" rx="1" stroke="#9b4738" stroke-width="1.5"/><path d="M4 16h24M12 12V6l4-3 4 3v6" stroke="#9b4738" stroke-width="1.5"/></svg>
+            </div>
+            <h4 data-i18n="re.sector_1">Commercial &amp; Office</h4>
+            <p data-i18n="re.sector_1_desc">Büroflächen, Co-Working und gewerbliche Immobilien an A-Standorten in DE und CH.</p>
+          </div>
+          <div class="re-sector" data-stagger>
+            <div class="re-sector-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="6" y="8" width="20" height="20" rx="1" stroke="#9b4738" stroke-width="1.5"/><path d="M6 14h20M16 8v20" stroke="#9b4738" stroke-width="1" stroke-dasharray="2 2"/><rect x="9" y="17" width="5" height="5" rx="0.5" stroke="#9b4738" stroke-width="1"/><rect x="18" y="17" width="5" height="5" rx="0.5" stroke="#9b4738" stroke-width="1"/></svg>
+            </div>
+            <h4 data-i18n="re.sector_2">Retail &amp; Hospitality</h4>
+            <p data-i18n="re.sector_2_desc">Internationale Expansion für Hotelmarken, Restaurants, F&amp;B und Retailer.</p>
+          </div>
+          <div class="re-sector" data-stagger>
+            <div class="re-sector-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M4 28h24M8 28V14l8-6 8 6v14" stroke="#9b4738" stroke-width="1.5"/><rect x="13" y="20" width="6" height="8" rx="0.5" stroke="#9b4738" stroke-width="1.5"/></svg>
+            </div>
+            <h4 data-i18n="re.sector_3">Residential &amp; Living</h4>
+            <p data-i18n="re.sector_3_desc">Wohnimmobilien, Micro-Living und Serviced Apartments &ndash; Verkauf und Vermittlung.</p>
+          </div>
+          <div class="re-sector" data-stagger>
+            <div class="re-sector-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect x="4" y="10" width="24" height="16" rx="1" stroke="#9b4738" stroke-width="1.5"/><path d="M4 18h24" stroke="#9b4738" stroke-width="1"/><path d="M10 10V6h12v4" stroke="#9b4738" stroke-width="1.5"/></svg>
+            </div>
+            <h4 data-i18n="re.sector_4">Logistics &amp; Industrial</h4>
+            <p data-i18n="re.sector_4_desc">Lagerflächen, Logistikimmobilien und Produktionsstätten in strategischen Lagen.</p>
+          </div>
+        </div>
+
+        <!-- Featured Deals Showcase -->
+        <div class="re-featured" data-stagger-parent>
+          <div class="re-featured-card" data-stagger>
+            <div class="re-featured-img">
+              <img src="./images/deals/friedrichstrasse-1.jpg" alt="City Gate, Friedrichstraße 6, Stuttgart" width="800" height="533" loading="lazy">
+            </div>
+            <div class="re-featured-info">
+              <span class="re-featured-tag">Stuttgart</span>
+              <h4>City Gate &ndash; Friedrichstraße 6</h4>
+              <p>Vermittlung der exklusiven Gastronomiefläche RITZI &ndash; ca. 485 m² Restaurant + 300 m² Terrasse im Herzen Stuttgarts.</p>
+              <div class="re-featured-meta">
+                <span>~785 m²</span>
+                <span>Gastronomie</span>
+                <span>Bosko Trifunovic</span>
+              </div>
+            </div>
+          </div>
+          <div class="re-featured-card" data-stagger>
+            <div class="re-featured-img">
+              <img src="./images/deals/dornhaldenstrasse-1.jpg" alt="Dornhaldenstraße 6, Stuttgart" width="800" height="533" loading="lazy">
+            </div>
+            <div class="re-featured-info">
+              <span class="re-featured-tag">Stuttgart</span>
+              <h4>Dornhaldenstraße 6</h4>
+              <p>Grossflächige Gewerbeimmobilie mit Potenzial für Umbau und Repositionierung &ndash; Vermittlung und Beratung.</p>
+              <div class="re-featured-meta">
+                <span>Gewerbe</span>
+                <span>Vermittlung</span>
+                <span>Bosko Trifunovic</span>
+              </div>
+            </div>
+          </div>
+          <div class="re-featured-card" data-stagger>
+            <div class="re-featured-img">
+              <img src="./images/deals/muellerstrasse-berlin.png" alt="Müllerstraße 153, Berlin" width="800" height="533" loading="lazy">
+            </div>
+            <div class="re-featured-info">
+              <span class="re-featured-tag">Berlin</span>
+              <h4>M&uuml;llerstraße 153 &ndash; Micro Living Conversion</h4>
+              <p>6'318 m² Gewerbeimmobilie in Berlin-Wedding &ndash; Conversion zu 126 Serviced Apartments mit BobW als Betreiber. DGNB Gold zertifiziert.</p>
+              <div class="re-featured-meta">
+                <span>6'318 m²</span>
+                <span>Investment</span>
+                <span>Bosko Trifunovic</span>
+              </div>
+            </div>
+          </div>
+          <div class="re-featured-card" data-stagger>
+            <div class="re-featured-img">
+              <img src="./images/deals/moninger-hof.jpg" alt="Moninger Hof, Karlsruhe" width="800" height="533" loading="lazy">
+            </div>
+            <div class="re-featured-info">
+              <span class="re-featured-tag">Karlsruhe</span>
+              <h4>Moninger Hof &ndash; Moninger Straße 7-11</h4>
+              <p>Neubau-Wohnprojekt mit 29 Wohneinheiten (70&ndash;150 m²) in der begehrten Karlsruher Weststadt &ndash; Verkauf und Vermarktung.</p>
+              <div class="re-featured-meta">
+                <span>29 Einheiten</span>
+                <span>Residential</span>
+                <span>Bosko Trifunovic</span>
+              </div>
+            </div>
+          </div>
+          <div class="re-featured-card" data-stagger>
+            <div class="re-featured-img">
+              <img src="./images/deals/eterna-park.png" alt="Eterna Park Nürnberg" width="800" height="533" loading="lazy">
+            </div>
+            <div class="re-featured-info">
+              <span class="re-featured-tag">N&uuml;rnberg</span>
+              <h4>Eterna Park &ndash; Kreuzsteinstraße 7</h4>
+              <p>Neubau-Mehrfamilienhaus mit 121 Wohneinheiten, ca. 6'954 m² &ndash; KfN QnG zertifiziert, Verkauf an Tishman Speyer.</p>
+              <div class="re-featured-meta">
+                <span>121 Einheiten</span>
+                <span>Investment</span>
+                <span>Bosko Trifunovic</span>
+              </div>
+            </div>
+          </div>
+          <div class="re-featured-card" data-stagger>
+            <div class="re-featured-img">
+              <img src="./images/deals/ayverdis-zurich.jpg" alt="Ayverdis, Bahnhofplatz Zürich" width="800" height="533" loading="lazy">
+            </div>
+            <div class="re-featured-info">
+              <span class="re-featured-tag">Z&uuml;rich</span>
+              <h4>Ayverdis &ndash; Bahnhofplatz</h4>
+              <p>Vermietung einer erstklassigen Retailfläche am Zürcher Bahnhofplatz &ndash; einer der meistfrequentierten Standorte der Schweiz.</p>
+              <div class="re-featured-meta">
+                <span>Retail</span>
+                <span>1A-Lage</span>
+                <span>Kaito Weingart</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Quotes above Deals -->
+        <div class="team-quotes-inline" data-stagger-parent>
+          <div class="team-quote-card" data-stagger>
+            <blockquote>
+              <p>&laquo;Technologie und saubere Prozesse sind der Schl&uuml;ssel, um in der Immobilienbranche echten Vorsprung zu schaffen &ndash; schneller, pr&auml;ziser und nachhaltiger als der Markt.&raquo;</p>
+            </blockquote>
+            <div class="team-quote-author">
+              <img src="./images/team/bogdan-trifunovic.webp" alt="Bogdan Trifunovic" width="48" height="48" loading="lazy">
+              <div>
+                <strong>Bogdan Trifunovic</strong>
+                <span>MD &amp; Co-Founder</span>
+              </div>
+            </div>
+          </div>
+          <div class="team-quote-card" data-stagger>
+            <blockquote>
+              <p>&laquo;Langfristige Partnerschaften mit unseren Kunden stehen f&uuml;r uns im Mittelpunkt &ndash; wir begleiten jeden Deal pers&ouml;nlich von der ersten Besichtigung bis zum Vertragsabschluss.&raquo;</p>
+            </blockquote>
+            <div class="team-quote-author">
+              <img src="./images/team/bruno-pina.webp" alt="Julian Neyer" width="48" height="48" loading="lazy">
+              <div>
+                <strong>Julian Neyer</strong>
+                <span>Partner</span>
+              </div>
+            </div>
+          </div>
+          <div class="team-quote-card" data-stagger>
+            <blockquote>
+              <p>&laquo;Jede Fl&auml;che hat Potenzial &ndash; unser Ziel ist es, die perfekte Verbindung zwischen Standort, Mieter und Eigent&uuml;mer herzustellen und so f&uuml;r alle Seiten Mehrwert zu schaffen.&raquo;</p>
+            </blockquote>
+            <div class="team-quote-author">
+              <img src="./images/team/kaito-weingart.webp" alt="Kaito Weingart" width="48" height="48" loading="lazy">
+              <div>
+                <strong>Kaito Weingart</strong>
+                <span>Partner</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deals Panel -->
+        <div class="deals-panel-full" data-animate>
+          <div class="deals-panel" id="dealsPanel">
+            <div class="deals-panel-header">
+              <h3 class="deals-panel-title" data-i18n="real_estate.deals_label">Track Record &ndash; Ausgewählte Transaktionen</h3>
+              <div class="deals-tab-btns">
+                <button class="deals-tab-btn active" data-country="de" type="button">
+                  <svg viewBox="0 0 32 24" width="22" height="16" aria-hidden="true"><rect width="32" height="8" fill="#000"/><rect y="8" width="32" height="8" fill="#D00"/><rect y="16" width="32" height="8" fill="#FFCE00"/><rect width="32" height="24" rx="2" fill="none" stroke="#e0e0e0" stroke-width="0.5"/></svg>
+                  <span data-i18n="deals.germany">Deutschland</span>
+                </button>
+                <button class="deals-tab-btn" data-country="ch" type="button">
+                  <svg viewBox="0 0 32 24" width="22" height="16" aria-hidden="true"><rect width="32" height="24" rx="2" fill="#D52B1E"/><path d="M14 6h4v12h-4z" fill="#fff"/><path d="M10 10h12v4H10z" fill="#fff"/></svg>
+                  <span data-i18n="deals.switzerland">Schweiz</span>
+                </button>
+              </div>
+            </div>
+            <ul class="deals-list" id="dealsList"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="section" id="partners">
+      <div class="container" data-animate>
+        <p class="section-label" data-i18n="partners.label">Partner</p>
+        <h2 class="section-title" data-text-reveal data-i18n="partners.title">Partner &amp; Investoren</h2>
+        <p class="section-subtitle" data-i18n="partners.subtitle">Wir arbeiten mit führenden Marken und Investoren zusammen, um nachhaltige Werte zu schaffen.</p>
+        <div class="partners-grid" data-stagger-parent>
+          <div class="partner-logo" data-stagger><img src="./images/partners/dunman-capital.jpg" alt="Dunman Capital" width="160" height="60" loading="lazy" style="max-height:80px"></div>
+          <div class="partner-logo" data-stagger><img src="./images/partners/bobw.png" alt="Bob W." width="160" height="60" loading="lazy"></div>
+          <div class="partner-logo" data-stagger><img src="./images/partners/limehome.png" alt="Limehome" width="160" height="60" loading="lazy" style="max-height:80px"></div>
+          <div class="partner-logo" data-stagger><img src="./images/partners/herecon.png" alt="HERECON" width="160" height="60" loading="lazy"></div>
+          <div class="partner-logo" data-stagger><img src="./images/partners/mcdreams.png" alt="McDreams Hotels" width="160" height="60" loading="lazy"></div>
+          <div class="partner-logo" data-stagger><img src="./images/partners/vorreiter.png" alt="Vorreiter AG" width="160" height="60" loading="lazy"></div>
+          <div class="partner-logo" data-stagger><img src="./images/partners/myspa.webp" alt="MySpa" width="160" height="60" loading="lazy"></div>
+          <div class="partner-logo" data-stagger><img src="./images/partners/radisson.webp" alt="Radisson" width="160" height="60" loading="lazy"></div>
+          <div class="partner-logo" data-stagger><img src="./images/partners/decathlon.webp" alt="Decathlon" width="160" height="60" loading="lazy"></div>
+          <div class="partner-logo" data-stagger><img src="./images/partners/currily.svg" alt="Currily" width="160" height="60" loading="lazy"></div>
+          <div class="partner-logo" data-stagger><img src="./images/partners/lbbw.png" alt="LBBW" width="160" height="60" loading="lazy" style="max-height:32px"></div>
+          <div class="partner-logo" data-stagger><img src="./images/partners/union-investment.png" alt="Union Investment" width="160" height="60" loading="lazy" style="max-height:32px"></div>
         </div>
       </div>
     </section>
@@ -335,167 +638,58 @@
       </div>
     </section>
 
-    <!-- Hotels Section -->
-    <section class="section" id="hotels">
-      <div class="container">
-        <p class="section-label" data-i18n="hotels.label" data-animate>Unsere Hotels</p>
-        <h2 class="section-title" data-text-reveal data-i18n="hotels.title" data-animate>Einzigartige Hotels in der Schweiz</h2>
-        <p class="section-subtitle" data-i18n="hotels.subtitle" data-animate>Drei aussergewöhnliche Häuser, drei einzigartige Erlebnisse.</p>
-
-        <!-- Prize by Radisson -->
-        <article class="hotel-showcase" data-animate>
-          <div class="hotel-slider">
-            <div class="hotel-slider-track">
-              <div class="hotel-slide"><picture><source srcset="./images/prize-radisson/gallery-1.webp" type="image/webp"><img src="./images/prize-radisson/gallery-1.jpg" alt="Prize by Radisson Design Room" width="800" height="532" loading="lazy"></picture></div>
-              <div class="hotel-slide"><picture><source srcset="./images/prize-radisson/gallery-2.webp" type="image/webp"><img src="./images/prize-radisson/gallery-2.jpg" alt="Prize by Radisson Zimmer" width="800" height="532" loading="lazy"></picture></div>
-              <div class="hotel-slide"><picture><source srcset="./images/prize-radisson/gallery-3.webp" type="image/webp"><img src="./images/prize-radisson/gallery-3.jpg" alt="Prize by Radisson Lounge" width="800" height="532" loading="lazy"></picture></div>
+    <!-- Hotels Section — Compact -->
+    <section class="section section-alt hotels-compact" id="hotels">
+      <div class="container" data-animate>
+        <p class="section-label" data-i18n="hotels.label">Unsere Hotels</p>
+        <h2 class="section-title" data-text-reveal data-i18n="hotels.title">Einzigartige Hotels in der Schweiz</h2>
+        <div class="hotels-card-grid" data-stagger-parent>
+          <a href="https://www.radissonhotels.com/de-de/hotels/prize-by-radisson-affoltern-am-albis" class="hotel-card" target="_blank" rel="noopener" data-stagger>
+            <div class="hotel-card-img">
+              <picture>
+                <source srcset="./images/prize-radisson/gallery-1.webp" type="image/webp">
+                <img src="./images/prize-radisson/gallery-1.jpg" alt="Prize by Radisson" width="800" height="532" loading="lazy">
+              </picture>
             </div>
-            <button class="slider-btn slider-prev" aria-label="Vorheriges Bild">&#10094;</button>
-            <button class="slider-btn slider-next" aria-label="Nächstes Bild">&#10095;</button>
-            <div class="slider-dots"></div>
-          </div>
-          <div class="hotel-info">
-            <h3 data-i18n="hotels.prize.name">Prize by Radisson</h3>
-            <p class="hotel-location">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="#9b4738"/></svg>
-              <span data-i18n="hotels.prize.location">Affoltern am Albis, Zürich</span>
-            </p>
-            <p class="hotel-description" data-i18n="hotels.prize.description">Ein modernes Designhotel in Zusammenarbeit mit Radisson. Zeitgemässer Komfort trifft auf erstklassigen Service in der Region Zürich.</p>
-            <ul class="hotel-features">
-              <li>Design Rooms</li>
-              <li>Meeting Rooms</li>
-              <li data-i18n="hotels.prize.features.2">Zentrale Lage</li>
-            </ul>
-            <a href="https://www.radissonhotels.com/de-de/hotels/prize-by-radisson-affoltern-am-albis" class="btn btn-accent" target="_blank" rel="noopener" data-i18n="hotels.cta">Website besuchen</a>
-          </div>
-        </article>
-
-        <!-- Chalet Swiss -->
-        <article class="hotel-showcase" data-animate>
-          <div class="hotel-slider">
-            <div class="hotel-slider-track">
-              <div class="hotel-slide"><picture><source srcset="./images/chalet-swiss/gallery-1.webp" type="image/webp"><img src="./images/chalet-swiss/gallery-1.jpg" alt="Chalet Swiss Interlaken Zimmer" width="800" height="532" loading="lazy"></picture></div>
-              <div class="hotel-slide"><picture><source srcset="./images/chalet-swiss/gallery-2.webp" type="image/webp"><img src="./images/chalet-swiss/gallery-2.jpg" alt="Chalet Swiss Restaurant" width="800" height="532" loading="lazy"></picture></div>
-              <div class="hotel-slide"><picture><source srcset="./images/chalet-swiss/gallery-3.webp" type="image/webp"><img src="./images/chalet-swiss/gallery-3.jpg" alt="Chalet Swiss Panoramablick" width="800" height="532" loading="lazy"></picture></div>
+            <div class="hotel-card-info">
+              <h3 data-i18n="hotels.prize.name">Prize by Radisson</h3>
+              <p class="hotel-card-location" data-i18n="hotels.prize.location">Affoltern am Albis, Zürich</p>
             </div>
-            <button class="slider-btn slider-prev" aria-label="Vorheriges Bild">&#10094;</button>
-            <button class="slider-btn slider-next" aria-label="Nächstes Bild">&#10095;</button>
-            <div class="slider-dots"></div>
-          </div>
-          <div class="hotel-info">
-            <h3 data-i18n="hotels.chalet.name">Chalet Swiss</h3>
-            <p class="hotel-location">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="#9b4738"/></svg>
-              <span data-i18n="hotels.chalet.location">Interlaken, Berner Oberland</span>
-            </p>
-            <p class="hotel-description" data-i18n="hotels.chalet.description">Alpiner Charme im Herzen von Interlaken. Traditionelle Schweizer Gastfreundschaft mit Blick auf Eiger, Mönch und Jungfrau.</p>
-            <ul class="hotel-features">
-              <li data-i18n="hotels.chalet.features.0">Alpines Design</li>
-              <li>Restaurant</li>
-              <li data-i18n="hotels.chalet.features.2">Panoramablick</li>
-              <li>Jungfrau Region</li>
-            </ul>
-            <a href="https://chalet-swiss.ch/" class="btn btn-accent" target="_blank" rel="noopener" data-i18n="hotels.cta">Website besuchen</a>
-          </div>
-        </article>
-
-        <!-- Hotel Mulin -->
-        <article class="hotel-showcase" data-animate>
-          <div class="hotel-slider">
-            <div class="hotel-slider-track">
-              <div class="hotel-slide"><picture><source srcset="./images/hotel-mulin/Mulin.jpg" type="image/jpeg"><img src="./images/hotel-mulin/Mulin.jpg" alt="Hotel Mulin by Amanthos" width="800" height="600" loading="lazy"></picture></div>
-              <div class="hotel-slide"><picture><source srcset="./images/hotel-mulin/gallery-2.webp" type="image/webp"><img src="./images/hotel-mulin/gallery-2.jpg" alt="Hotel Mulin Zimmer" width="800" height="532" loading="lazy"></picture></div>
-              <div class="hotel-slide"><picture><source srcset="./images/hotel-mulin/gallery-3.webp" type="image/webp"><img src="./images/hotel-mulin/gallery-3.jpg" alt="Hotel Mulin Bar" width="800" height="532" loading="lazy"></picture></div>
+          </a>
+          <a href="https://chalet-swiss.ch/" class="hotel-card" target="_blank" rel="noopener" data-stagger>
+            <div class="hotel-card-img">
+              <picture>
+                <source srcset="./images/chalet-swiss/gallery-1.webp" type="image/webp">
+                <img src="./images/chalet-swiss/gallery-1.jpg" alt="Chalet Swiss Interlaken" width="800" height="532" loading="lazy">
+              </picture>
             </div>
-            <button class="slider-btn slider-prev" aria-label="Vorheriges Bild">&#10094;</button>
-            <button class="slider-btn slider-next" aria-label="Nächstes Bild">&#10095;</button>
-            <div class="slider-dots"></div>
-          </div>
-          <div class="hotel-info">
-            <h3 data-i18n="hotels.mulin.name">Hotel Mulin by Amanthos</h3>
-            <p class="hotel-location">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 1C5.24 1 3 3.24 3 6c0 3.75 5 9 5 9s5-5.25 5-9c0-2.76-2.24-5-5-5zm0 7a2 2 0 110-4 2 2 0 010 4z" fill="#9b4738"/></svg>
-              <span data-i18n="hotels.mulin.location">Breil / Brigels, Graubünden</span>
-            </p>
-            <p class="hotel-description" data-i18n="hotels.mulin.description">Ein Boutique-Hotel mit charmantem Restaurant und Bar. Kulinarische Exzellenz und gemütliche Atmosphäre vereint.</p>
-            <ul class="hotel-features">
-              <li data-i18n="hotels.mulin.features.0">Boutique Zimmer</li>
-              <li>Bar &amp; Lounge</li>
-              <li>Events</li>
-            </ul>
-            <a href="https://www.hotelmulin.ch" class="btn btn-accent" target="_blank" rel="noopener" data-i18n="hotels.cta">Website besuchen</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Real Estate Section -->
-    <section class="section section-alt" id="real-estate">
-      <div class="container">
-        <div class="split-section" data-animate>
-          <div class="split-content">
-            <p class="section-label" data-i18n="real_estate.label">Immobilien</p>
-            <h2 class="section-title" data-i18n="real_estate.title">Real Estate</h2>
-            <p class="split-description" data-i18n="real_estate.description">Amanthos Group entwickelt und verwaltet Immobilien an ausgewählten Standorten in der Schweiz. Unser Fokus liegt auf nachhaltiger Wertschöpfung und langfristigen Partnerschaften.</p>
-            <ul class="feature-list">
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="#9b4738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span data-i18n="real_estate.features.0">Internationale Expansion für Hotelmarken, Restaurants oder Retail</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="#9b4738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span data-i18n="real_estate.features.1">Investmentberatung &amp; Verkauf</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="#9b4738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span data-i18n="real_estate.features.2">Asset &amp; Property Management</span>
-              </li>
-              <li>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="#9b4738" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span data-i18n="real_estate.features.3">Immobilienbewertung &amp; Verkauf</span>
-              </li>
-            </ul>
-          </div>
-          <div class="deals-panel" id="dealsPanel">
-            <div class="deals-panel-header">
-              <h3 class="deals-panel-title" data-i18n="real_estate.deals_label">Einige unserer Deals:</h3>
-              <div class="deals-tab-btns">
-                <button class="deals-tab-btn" data-country="de" type="button">
-                  <svg viewBox="0 0 32 24" width="22" height="16" aria-hidden="true"><rect width="32" height="8" fill="#000"/><rect y="8" width="32" height="8" fill="#D00"/><rect y="16" width="32" height="8" fill="#FFCE00"/><rect width="32" height="24" rx="2" fill="none" stroke="#e0e0e0" stroke-width="0.5"/></svg>
-                  <span data-i18n="deals.germany">Deutschland</span>
-                </button>
-                <button class="deals-tab-btn active" data-country="ch" type="button">
-                  <svg viewBox="0 0 32 24" width="22" height="16" aria-hidden="true"><rect width="32" height="24" rx="2" fill="#D52B1E"/><path d="M14 6h4v12h-4z" fill="#fff"/><path d="M10 10h12v4H10z" fill="#fff"/></svg>
-                  <span data-i18n="deals.switzerland">Schweiz</span>
-                </button>
-              </div>
+            <div class="hotel-card-info">
+              <h3 data-i18n="hotels.chalet.name">Chalet Swiss</h3>
+              <p class="hotel-card-location" data-i18n="hotels.chalet.location">Interlaken, Berner Oberland</p>
             </div>
-            <ul class="deals-list" id="dealsList"></ul>
-          </div>
+          </a>
+          <a href="https://www.hotelmulin.ch" class="hotel-card" target="_blank" rel="noopener" data-stagger>
+            <div class="hotel-card-img">
+              <picture>
+                <source srcset="./images/hotel-mulin/Mulin.jpg" type="image/jpeg">
+                <img src="./images/hotel-mulin/Mulin.jpg" alt="Hotel Mulin by Amanthos" width="800" height="600" loading="lazy">
+              </picture>
+            </div>
+            <div class="hotel-card-info">
+              <h3 data-i18n="hotels.mulin.name">Hotel Mulin by Amanthos</h3>
+              <p class="hotel-card-location" data-i18n="hotels.mulin.location">Breil / Brigels, Graubünden</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
-
-    <!-- Serviced Apartments / Amanthos Living Section -->
-    <section class="section living-section" id="serviced-apartments">
-      <div class="container">
-        <div class="living-header" data-animate>
-          <p class="section-label" data-i18n="serviced_apartments.label">Serviced Apartments</p>
-          <h2 class="section-title" data-text-reveal data-i18n="serviced_apartments.title">Wohnen mit Hotelkomfort</h2>
-          <p class="section-subtitle" data-i18n="serviced_apartments.description">Amanthos Living bietet vollmöblierte Serviced Apartments in Zürich, Solothurn und Nyon. Ideal für Business-Reisende und Langzeitgäste, die mehr als ein Hotelzimmer suchen.</p>
-        </div>
-
-        <!-- Hero Image -->
-        <div class="living-hero-image" data-animate>
-          <picture>
-            <source srcset="./images/amanthos-living/landing-hero.webp" type="image/webp">
-            <img src="./images/amanthos-living/landing-hero.jpg" alt="Amanthos Living - Serviced Apartments" width="2400" height="1596" loading="lazy">
-          </picture>
-        </div>
-
-        <!-- Location Cards -->
-        <div class="living-locations" data-stagger-parent>
+    <!-- Serviced Apartments — Compact -->
+    <section class="section living-section-compact" id="serviced-apartments">
+      <div class="container" data-animate>
+        <p class="section-label" data-i18n="serviced_apartments.label">Serviced Apartments</p>
+        <h2 class="section-title" data-text-reveal data-i18n="serviced_apartments.title">Wohnen mit Hotelkomfort</h2>
+        <div class="living-compact-grid" data-stagger-parent>
           <div class="living-location-card" data-stagger>
             <div class="living-location-img">
               <picture>
@@ -530,177 +724,99 @@
             </div>
           </div>
         </div>
-
-        <!-- Features + Room Preview -->
-        <div class="living-room-preview" data-animate>
-          <div class="living-gallery-grid">
-            <div class="living-gallery-main">
-              <picture>
-                <source srcset="./images/amanthos-living/zurich/living-room.webp" type="image/webp">
-                <img src="./images/amanthos-living/zurich/living-room.jpg" alt="Amanthos Living - Wohnzimmer" width="1600" height="1065" loading="lazy">
-              </picture>
-            </div>
-            <div class="living-gallery-side">
-              <div class="living-gallery-side-img">
-                <picture>
-                  <source srcset="./images/amanthos-living/zurich/kitchen.webp" type="image/webp">
-                  <img src="./images/amanthos-living/zurich/kitchen.jpg" alt="Amanthos Living - Küche" width="1600" height="1065" loading="lazy">
-                </picture>
-              </div>
-              <div class="living-gallery-side-img">
-                <picture>
-                  <source srcset="./images/amanthos-living/zurich/bedroom.webp" type="image/webp">
-                  <img src="./images/amanthos-living/zurich/bedroom.jpg" alt="Amanthos Living - Schlafzimmer" width="1600" height="1064" loading="lazy">
-                </picture>
-              </div>
-            </div>
-          </div>
-          <div class="living-room-info">
-            <h3 data-i18n="serviced_apartments.room_title">Ihr Zuhause auf Zeit</h3>
-            <p data-i18n="serviced_apartments.room_description">Grosszügige, lichtdurchflutete Apartments mit allem, was Sie brauchen. Hochwertige Möbel, vollständig ausgestattete Küche und ein Ambiente, das sich sofort wie Zuhause anfühlt.</p>
-            <div class="living-room-specs">
-              <div class="living-spec">
-                <span class="living-spec-value" data-i18n="serviced_apartments.spec_1_value">Ab 30m²</span>
-                <span class="living-spec-label" data-i18n="serviced_apartments.spec_1_label">Wohnfläche</span>
-              </div>
-              <div class="living-spec">
-                <span class="living-spec-value" data-i18n="serviced_apartments.spec_2_value">Ab 1 Monat</span>
-                <span class="living-spec-label" data-i18n="serviced_apartments.spec_2_label">Mindestaufenthalt</span>
-              </div>
-              <div class="living-spec">
-                <span class="living-spec-value" data-i18n="serviced_apartments.spec_3_value">3 Städte</span>
-                <span class="living-spec-label" data-i18n="serviced_apartments.spec_3_label">Standorte</span>
-              </div>
-            </div>
-            <a href="https://www.amanthosliving.com" class="btn btn-accent" target="_blank" rel="noopener" data-i18n="serviced_apartments.cta">amanthosliving.com besuchen</a>
-          </div>
+        <div class="living-compact-cta">
+          <a href="https://www.amanthosliving.com" class="btn btn-accent" target="_blank" rel="noopener" data-i18n="serviced_apartments.cta">amanthosliving.com besuchen</a>
         </div>
       </div>
     </section>
 
     <!-- Team Section -->
-    <section class="section section-alt" id="team">
+    <section class="section" id="team">
       <div class="container">
         <p class="section-label" data-i18n="team.label" data-animate>Unser Team</p>
         <h2 class="section-title" data-text-reveal data-i18n="team.title" data-animate>Die Menschen hinter Amanthos</h2>
         <p class="section-subtitle" data-i18n="team.subtitle" data-animate>Ein engagiertes Team mit Leidenschaft für Immobilien und Gastfreundschaft.</p>
-        <div class="team-countries">
-          <!-- Switzerland Team -->
-          <div class="team-country-group" data-stagger-parent>
-            <div class="team-country-flag">
-              <svg viewBox="0 0 32 24" width="28" height="20" aria-hidden="true"><rect width="32" height="24" rx="2" fill="#D52B1E"/><path d="M14 6h4v12h-4z" fill="#fff"/><path d="M10 10h12v4H10z" fill="#fff"/></svg>
-              <span data-i18n="deals.switzerland">Schweiz</span>
+        <!-- Founders Row -->
+        <div class="team-row-founders" data-stagger-parent>
+          <div class="team-card" data-stagger>
+            <picture>
+              <source srcset="./images/team/bosko-trifunovic.webp" type="image/webp">
+              <img src="./images/team/bosko-trifunovic.jpg" alt="Bosko Trifunovic" width="300" height="300" loading="lazy">
+            </picture>
+            <h3>Bosko Trifunovic</h3>
+            <div class="team-flags">
+              <svg viewBox="0 0 32 24" width="20" height="15" aria-label="Schweiz"><rect width="32" height="24" rx="2" fill="#D52B1E"/><path d="M14 6h4v12h-4z" fill="#fff"/><path d="M10 10h12v4H10z" fill="#fff"/></svg>
+              <svg viewBox="0 0 32 24" width="20" height="15" aria-label="Deutschland"><rect width="32" height="8" fill="#000"/><rect y="8" width="32" height="8" fill="#D00"/><rect y="16" width="32" height="8" fill="#FFCE00"/><rect width="32" height="24" rx="2" fill="none" stroke="#e0e0e0" stroke-width="0.5"/></svg>
             </div>
-            <div class="team-grid-country">
-              <!-- Bogdan Trifunovic -->
-              <div class="team-card" data-stagger>
-                <picture>
-                  <source srcset="./images/team/bogdan-trifunovic.webp" type="image/webp">
-                  <img src="./images/team/bogdan-trifunovic.jpg" alt="Bogdan Trifunovic" width="300" height="300" loading="lazy">
-                </picture>
-                <h3>Bogdan Trifunovic</h3>
-                <p class="team-role">MD & Co-Founder</p>
-                <p class="team-focus">AI Development & Hotel Operations</p>
-                <a href="mailto:bogdan.trifunovic@amanthos.com" class="team-email" aria-label="E-Mail Bogdan Trifunovic">
-                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
-                </a>
-              </div>
-              <!-- Bosko Trifunovic -->
-              <div class="team-card" data-stagger>
-                <picture>
-                  <source srcset="./images/team/bosko-trifunovic.webp" type="image/webp">
-                  <img src="./images/team/bosko-trifunovic.jpg" alt="Bosko Trifunovic" width="300" height="300" loading="lazy">
-                </picture>
-                <h3>Bosko Trifunovic</h3>
-                <p class="team-role">CEO & Co-Founder</p>
-                <p class="team-focus">Commercial & Residential Real Estate</p>
-                <a href="mailto:bosko.trifunovic@amanthos.com" class="team-email" aria-label="E-Mail Bosko Trifunovic">
-                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
-                </a>
-              </div>
-              <!-- Kaito Weingart -->
-              <div class="team-card" data-stagger>
-                <picture>
-                  <source srcset="./images/team/kaito-weingart.webp" type="image/webp">
-                  <img src="./images/team/kaito-weingart.jpg" alt="Kaito Weingart" width="300" height="300" loading="lazy">
-                </picture>
-                <h3>Kaito Weingart</h3>
-                <p class="team-role">Partner</p>
-                <p class="team-focus">Commercial Real Estate, Hotel Operations & Finance</p>
-                <a href="mailto:kaito.weingart@amanthos.com" class="team-email" aria-label="E-Mail Kaito Weingart">
-                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
-                </a>
-              </div>
-            </div>
+            <p class="team-role">CEO & Co-Founder</p>
+            <p class="team-focus">Commercial & Residential Real Estate</p>
+            <a href="mailto:bosko.trifunovic@amanthos.com" class="team-email" aria-label="E-Mail Bosko Trifunovic">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            </a>
           </div>
-
-          <!-- Germany Team -->
-          <div class="team-country-group" data-stagger-parent>
-            <div class="team-country-flag">
-              <svg viewBox="0 0 32 24" width="28" height="20" aria-hidden="true"><rect width="32" height="8" fill="#000"/><rect y="8" width="32" height="8" fill="#D00"/><rect y="16" width="32" height="8" fill="#FFCE00"/><rect width="32" height="24" rx="2" fill="none" stroke="#e0e0e0" stroke-width="0.5"/></svg>
-              <span data-i18n="deals.germany">Deutschland</span>
+          <div class="team-card" data-stagger>
+            <picture>
+              <source srcset="./images/team/bogdan-trifunovic.webp" type="image/webp">
+              <img src="./images/team/bogdan-trifunovic.jpg" alt="Bogdan Trifunovic" width="300" height="300" loading="lazy">
+            </picture>
+            <h3>Bogdan Trifunovic</h3>
+            <div class="team-flags">
+              <svg viewBox="0 0 32 24" width="20" height="15" aria-label="Schweiz"><rect width="32" height="24" rx="2" fill="#D52B1E"/><path d="M14 6h4v12h-4z" fill="#fff"/><path d="M10 10h12v4H10z" fill="#fff"/></svg>
             </div>
-            <div class="team-grid-country">
-              <!-- Julian Neyer (swapped picture: using bruno-pina) -->
-              <div class="team-card" data-stagger>
-                <picture>
-                  <source srcset="./images/team/bruno-pina.webp" type="image/webp">
-                  <img src="./images/team/bruno-pina.jpg" alt="Julian Neyer" width="300" height="300" loading="lazy">
-                </picture>
-                <h3>Julian Neyer</h3>
-                <p class="team-role">Partner</p>
-                <p class="team-focus">Commercial Real Estate & Office Letting</p>
-                <a href="mailto:julian.neyer@amanthos.com" class="team-email" aria-label="E-Mail Julian Neyer">
-                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
-                </a>
-              </div>
-              <!-- Bosko Trifunovic -->
-              <div class="team-card" data-stagger>
-                <picture>
-                  <source srcset="./images/team/bosko-trifunovic.webp" type="image/webp">
-                  <img src="./images/team/bosko-trifunovic.jpg" alt="Bosko Trifunovic" width="300" height="300" loading="lazy">
-                </picture>
-                <h3>Bosko Trifunovic</h3>
-                <p class="team-role">CEO & Co-Founder</p>
-                <p class="team-focus">Commercial & Residential Real Estate</p>
-                <a href="mailto:bosko.trifunovic@amanthos.com" class="team-email" aria-label="E-Mail Bosko Trifunovic">
-                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
-                </a>
-              </div>
-              <!-- Bruno Villagarcia (swapped picture: using julian-neyer) -->
-              <div class="team-card" data-stagger>
-                <picture>
-                  <source srcset="./images/team/julian-neyer.webp" type="image/webp">
-                  <img src="./images/team/julian-neyer.jpg" alt="Bruno Villagarcia" width="300" height="300" loading="lazy">
-                </picture>
-                <h3>Bruno Villagarcia</h3>
-                <p class="team-role">Art Director</p>
-                <p class="team-focus">Pictures, Designs & Branding</p>
-                <a href="mailto:bruno.villagarcia@amanthos.com" class="team-email" aria-label="E-Mail Bruno Villagarcia">
-                  <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
-                </a>
-              </div>
-            </div>
+            <p class="team-role">MD & Co-Founder</p>
+            <p class="team-focus">AI Development & Hotel Operations</p>
+            <a href="mailto:bogdan.trifunovic@amanthos.com" class="team-email" aria-label="E-Mail Bogdan Trifunovic">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Partners Section -->
-    <section class="section" id="partners">
-      <div class="container" data-animate>
-        <p class="section-label" data-i18n="partners.label">Partner</p>
-        <h2 class="section-title" data-text-reveal data-i18n="partners.title">Starke Partnerschaften</h2>
-        <p class="section-subtitle" data-i18n="partners.subtitle">Wir arbeiten mit führenden Marken zusammen, um unseren Gästen das beste Erlebnis zu bieten.</p>
-        <div class="partners-grid" data-stagger-parent>
-          <div class="partner-logo" data-stagger><img src="./images/partners/jysk.webp" alt="JYSK" width="160" height="60" loading="lazy"></div>
-          <div class="partner-logo" data-stagger><img src="./images/partners/starbucks.webp" alt="Starbucks" width="160" height="60" loading="lazy"></div>
-          <div class="partner-logo" data-stagger><img src="./images/partners/myspa.webp" alt="MySpa" width="160" height="60" loading="lazy"></div>
-          <div class="partner-logo" data-stagger><img src="./images/partners/radisson.webp" alt="Radisson" width="160" height="60" loading="lazy"></div>
-          <div class="partner-logo" data-stagger><img src="./images/partners/depot.webp" alt="Depot" width="160" height="60" loading="lazy"></div>
-          <div class="partner-logo" data-stagger><img src="./images/partners/sostrene-grene.webp" alt="Søstrene Grene" width="160" height="60" loading="lazy"></div>
-          <div class="partner-logo" data-stagger><img src="./images/partners/arctic-juice.webp" alt="Arctic Juice" width="160" height="60" loading="lazy"></div>
-          <div class="partner-logo" data-stagger><img src="./images/partners/decathlon.webp" alt="Decathlon" width="160" height="60" loading="lazy"></div>
+        <!-- Partners Row -->
+        <div class="team-row-partners" data-stagger-parent>
+          <div class="team-card" data-stagger>
+            <picture>
+              <source srcset="./images/team/kaito-weingart.webp" type="image/webp">
+              <img src="./images/team/kaito-weingart.jpg" alt="Kaito Weingart" width="300" height="300" loading="lazy">
+            </picture>
+            <h3>Kaito Weingart</h3>
+            <div class="team-flags">
+              <svg viewBox="0 0 32 24" width="20" height="15" aria-label="Schweiz"><rect width="32" height="24" rx="2" fill="#D52B1E"/><path d="M14 6h4v12h-4z" fill="#fff"/><path d="M10 10h12v4H10z" fill="#fff"/></svg>
+            </div>
+            <p class="team-role">Partner</p>
+            <p class="team-focus">Commercial Real Estate, Hotel Operations & Finance</p>
+            <a href="mailto:kaito.weingart@amanthos.com" class="team-email" aria-label="E-Mail Kaito Weingart">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            </a>
+          </div>
+          <div class="team-card" data-stagger>
+            <picture>
+              <source srcset="./images/team/bruno-pina.webp" type="image/webp">
+              <img src="./images/team/bruno-pina.jpg" alt="Julian Neyer" width="300" height="300" loading="lazy">
+            </picture>
+            <h3>Julian Neyer</h3>
+            <div class="team-flags">
+              <svg viewBox="0 0 32 24" width="20" height="15" aria-label="Deutschland"><rect width="32" height="8" fill="#000"/><rect y="8" width="32" height="8" fill="#D00"/><rect y="16" width="32" height="8" fill="#FFCE00"/><rect width="32" height="24" rx="2" fill="none" stroke="#e0e0e0" stroke-width="0.5"/></svg>
+            </div>
+            <p class="team-role">Partner</p>
+            <p class="team-focus">Commercial Real Estate & Hotel Operations</p>
+            <a href="mailto:julian.neyer@amanthos.com" class="team-email" aria-label="E-Mail Julian Neyer">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            </a>
+          </div>
+          <div class="team-card" data-stagger>
+            <picture>
+              <source srcset="./images/team/julian-neyer.webp" type="image/webp">
+              <img src="./images/team/julian-neyer.jpg" alt="Bruno Villagarcia" width="300" height="300" loading="lazy">
+            </picture>
+            <h3>Bruno Villagarcia</h3>
+            <div class="team-flags">
+              <svg viewBox="0 0 32 24" width="20" height="15" aria-label="Deutschland"><rect width="32" height="8" fill="#000"/><rect y="8" width="32" height="8" fill="#D00"/><rect y="16" width="32" height="8" fill="#FFCE00"/><rect width="32" height="24" rx="2" fill="none" stroke="#e0e0e0" stroke-width="0.5"/></svg>
+            </div>
+            <p class="team-role">Art Director</p>
+            <p class="team-focus">Pictures, Designs & Branding</p>
+            <a href="mailto:bruno.villagarcia@amanthos.com" class="team-email" aria-label="E-Mail Bruno Villagarcia">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -804,31 +920,53 @@
       /* --- Deals Panel --- */
       var teamImg = './images/team/';
       var dealsData = {
+        de: [
+          { de: '121 Wohneinheiten verkauft, Nürnberg-Schweinau (Tishman Speyer)', en: '121 residential units sold, Nuremberg-Schweinau (Tishman Speyer)', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
+          { de: "9'500 m² Liegenschaft verkauft, Reutlingen-Mittelstadt", en: '9,500 m² property sold, Reutlingen-Mittelstadt', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
+          { de: "SSB – 1'300 m² im Zeppelin Carré, Stuttgart", en: 'SSB – 1,300 m² at Zeppelin Carré, Stuttgart', persons: [{ first: 'Julian', img: teamImg + 'bruno-pina.webp' }] },
+          { de: "Ingenieurkammer BW – 740 m² Bürofläche, Q8 Neckarpark Stuttgart", en: 'Engineering Chamber BW – 740 m² office, Q8 Neckarpark Stuttgart', persons: [{ first: 'Julian', img: teamImg + 'bruno-pina.webp' }] },
+          { de: "Consulting-Unternehmen – 620 m² Bürofläche, Q8 Stuttgart", en: 'Consulting firm – 620 m² office, Q8 Stuttgart', persons: [{ first: 'Julian', img: teamImg + 'bruno-pina.webp' }] },
+          { de: 'RITZI Gastronomiefläche – 785 m², Friedrichstr. 6, Stuttgart', en: 'RITZI restaurant space – 785 m², Friedrichstr. 6, Stuttgart', persons: [{ first: 'Julian', img: teamImg + 'bruno-pina.webp' }] },
+          { de: "ProAir – 1'500 m² Bürofläche, Airport Business Center Stuttgart", en: 'ProAir – 1,500 m² office, Airport Business Center Stuttgart', persons: [{ first: 'Julian', img: teamImg + 'bruno-pina.webp' }] },
+          { de: '150 m² Bürofläche am S-Bahnhof Filderstadt', en: '150 m² office space at S-Bahn station Filderstadt', persons: [{ first: 'Julian', img: teamImg + 'bruno-pina.webp' }] },
+          { de: '150 m² Praxisfläche, Löffelstr. 3, Stuttgart Degerloch', en: '150 m² medical practice, Löffelstr. 3, Stuttgart Degerloch', persons: [{ first: 'Julian', img: teamImg + 'bruno-pina.webp' }] },
+          { de: 'Mehrfamilienhaus-Deal, Stuttgart-Mitte', en: 'Multi-family house deal, Stuttgart-Mitte', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
+          { de: '3-Zimmer-Wohnung Verkauf, Stuttgart-Süd', en: '3-room apartment sale, Stuttgart-Süd', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
+          { de: 'Logistikimmobilien-Verkauf in Bayern', en: 'Logistics property sale in Bavaria', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
+          { de: "4'400 m² Lagerfläche in Böblingen", en: '4,400 m² warehouse space in Böblingen', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
+          { de: "Duvenbeck – 12'000 m²", en: 'Duvenbeck – 12,000 m²', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
+          { de: "2'100 m² Fitnessfläche, Stuttgart", en: '2,100 m² fitness space, Stuttgart', persons: [{ first: 'Julian', img: teamImg + 'bruno-pina.webp' }] },
+          { de: 'Eterna Park Nürnberg – Verkauf an Tishman Speyer', en: 'Eterna Park Nuremberg – Sale to Tishman Speyer', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
+          { de: 'Müllerstraße 153, Berlin – Micro Living Conversion', en: 'Müllerstraße 153, Berlin – Micro Living Conversion', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
+          { de: 'Salzwiesenstraße 9, Stuttgart – Verkauf', en: 'Salzwiesenstraße 9, Stuttgart – Sale', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
+          { de: 'Moninger Hof, Karlsruhe – Verkauf', en: 'Moninger Hof, Karlsruhe – Sale', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
+          { de: 'BobW Frankfurt – Microliving Strategy', en: 'BobW Frankfurt – Microliving Strategy', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
+          { de: 'BobW Berlin – Microliving Strategy', en: 'BobW Berlin – Microliving Strategy', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
+          { de: 'Waldsiedlung Calw', en: 'Waldsiedlung Calw', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
+          { de: 'Freiham North WA2 West, München', en: 'Freiham North WA2 West, Munich', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
+          { de: 'Glashütte Achern', en: 'Glashütte Achern', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] }
+        ],
         ch: [
           { de: 'Ayverdis – Vermietung am Bahnhofplatz, Zürich', en: 'Ayverdis – Lease at Bahnhofplatz, Zurich', persons: [{ first: 'Kaito', img: teamImg + 'kaito-weingart.webp' }] },
           { de: 'Bachmann – Vermietung am Bleicherweg, Zürich', en: 'Bachmann – Lease at Bleicherweg, Zurich', persons: [{ first: 'Kaito', img: teamImg + 'kaito-weingart.webp' }] },
-          { de: 'Decathlon – Vermietung in Interlaken', en: 'Decathlon – Lease at Interlaken', persons: [{ first: 'Kaito', img: teamImg + 'kaito-weingart.webp' }] },
-          { de: 'Fielmann – Vermietung in Interlaken', en: 'Fielmann – Lease at Interlaken', persons: [{ first: 'Kaito', img: teamImg + 'kaito-weingart.webp' }] },
+          { de: 'Decathlon – Vermietung in Interlaken', en: 'Decathlon – Lease in Interlaken', persons: [{ first: 'Kaito', img: teamImg + 'kaito-weingart.webp' }] },
+          { de: 'Fielmann – Vermietung in Interlaken', en: 'Fielmann – Lease in Interlaken', persons: [{ first: 'Kaito', img: teamImg + 'kaito-weingart.webp' }] },
+          { de: 'Double Deal – ~600 m² im Bohl 9, St. Gallen', en: 'Double deal – ~600 m² at Bohl 9, St. Gallen', persons: [{ first: 'Kaito', img: teamImg + 'kaito-weingart.webp' }] },
+          { de: 'Kosmetik – ~90 m² im Forum Montreux', en: 'Cosmetics – ~90 m² at Forum Montreux', persons: [{ first: 'Kaito', img: teamImg + 'kaito-weingart.webp' }] },
+          { de: 'Avalon Bar – Weite Gasse 33, Baden', en: 'Avalon Bar – Weite Gasse 33, Baden', persons: [{ first: 'Kaito', img: teamImg + 'kaito-weingart.webp' }] },
+          { de: 'Depot – Relocation Luzern, 220 m²', en: 'Depot – Relocation Lucerne, 220 m²', persons: [{ first: 'Kaito', img: teamImg + 'kaito-weingart.webp' }] },
+          { de: 'Neuer Standort in Biel – Baugesuch eingereicht', en: 'New location in Biel – Building application submitted', persons: [{ first: 'Kaito', img: teamImg + 'kaito-weingart.webp' }] },
+          { de: 'Retail Deal in Wetzikon', en: 'Retail deal in Wetzikon', persons: [{ first: 'Kaito', img: teamImg + 'kaito-weingart.webp' }] },
           { de: 'Changemaker – Badstrasse, Baden', en: 'Changemaker – Badstrasse, Baden', persons: [{ first: 'Kaito', img: teamImg + 'kaito-weingart.webp' }] },
           { de: 'BoConcept – Basel', en: 'BoConcept – Basel', persons: [{ first: 'Kaito', img: teamImg + 'kaito-weingart.webp' }] },
           { de: '3 Vermietungen in Amriville, Amriswil', en: '3 Leases in Amriville, Amriswil', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }, { first: 'Kaito', img: teamImg + 'kaito-weingart.webp' }] },
           { de: 'Diverse Deals mit Bestseller, Place B und weiteren Retailern', en: 'Various deals with Bestseller, Place B and other retailers', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }, { first: 'Kaito', img: teamImg + 'kaito-weingart.webp' }] }
-        ],
-        de: [
-          { de: '121 Wohneinheiten verkauft', en: '121 residential units sold', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
-          { de: "9'500 m² grosse Liegenschaft verkauft", en: '9,500 m² property sold', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
-          { de: "SBB Deal – 1'300 m² im Zeppelin Carré, Stuttgart", en: 'SBB Deal – 1,300 m² at Zeppelin Carré, Stuttgart', persons: [{ first: 'Julian', img: teamImg + 'julian-neyer.webp' }] },
-          { de: 'Mehrfamilienhaus-Deal', en: 'Multi-family house deal', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
-          { de: 'Logistikimmobilien-Verkauf in Bayern', en: 'Logistics property sale in Bavaria', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
-          { de: "Vertrag über 4'400 m² Lagerfläche in Böblingen", en: 'Contract for 4,400 m² warehouse space in Böblingen', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
-          { de: "Duvenbeck – 12'000 m²", en: 'Duvenbeck – 12,000 m²', persons: [{ first: 'Bosko', img: teamImg + 'bosko-trifunovic.webp' }] },
-          { de: "2'100 m² Fitnessfläche, Stuttgart", en: '2,100 m² fitness space, Stuttgart', persons: [{ first: 'Julian', img: teamImg + 'julian-neyer.webp' }] }
         ]
       };
 
       var dealsList = document.getElementById('dealsList');
       var tabBtns = document.querySelectorAll('.deals-tab-btn');
-      var currentCountry = 'ch';
+      var currentCountry = 'de';
 
       function renderDeals(country) {
         if (!dealsList) return;
@@ -896,46 +1034,8 @@
       });
 
       // Initial render
-      renderDeals('ch');
+      renderDeals('de');
 
-      /* --- Hotel Sliders --- */
-      document.querySelectorAll('.hotel-slider').forEach(function (slider) {
-        var track = slider.querySelector('.hotel-slider-track');
-        var slides = slider.querySelectorAll('.hotel-slide');
-        var prevBtn = slider.querySelector('.slider-prev');
-        var nextBtn = slider.querySelector('.slider-next');
-        var dotsContainer = slider.querySelector('.slider-dots');
-        var current = 0;
-        var total = slides.length;
-
-        // Create dots
-        for (var i = 0; i < total; i++) {
-          var dot = document.createElement('button');
-          dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
-          dot.setAttribute('aria-label', 'Bild ' + (i + 1));
-          dot.dataset.index = i;
-          dotsContainer.appendChild(dot);
-        }
-        var dots = dotsContainer.querySelectorAll('.slider-dot');
-
-        function goTo(index) {
-          if (index < 0) index = total - 1;
-          if (index >= total) index = 0;
-          current = index;
-          track.style.transform = 'translateX(-' + (current * 100) + '%)';
-          dots.forEach(function (d, j) {
-            d.classList.toggle('active', j === current);
-          });
-        }
-
-        prevBtn.addEventListener('click', function () { goTo(current - 1); });
-        nextBtn.addEventListener('click', function () { goTo(current + 1); });
-        dotsContainer.addEventListener('click', function (e) {
-          if (e.target.classList.contains('slider-dot')) {
-            goTo(parseInt(e.target.dataset.index));
-          }
-        });
-      });
 
     });
 

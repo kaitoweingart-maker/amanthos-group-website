@@ -496,21 +496,35 @@ main {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   text-decoration: none;
   flex-shrink: 0;
 }
 
 .nav-logo img {
-  height: 64px;
+  height: 36px;
   width: auto;
-  filter: brightness(0) invert(1);
+  filter: none;
   transition: all var(--duration) var(--ease);
 }
 
 .nav.scrolled .nav-logo img {
-  height: 52px;
+  height: 30px;
   filter: none;
+}
+
+.nav-logo-text {
+  font-family: 'DM Sans', var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #fff;
+  transition: color var(--duration) var(--ease);
+}
+
+.nav.scrolled .nav-logo-text {
+  color: var(--color-primary);
 }
 
 .nav-links {
@@ -718,10 +732,18 @@ main {
   z-index: -1;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.15) 0%,
-    rgba(0, 0, 0, 0.25) 40%,
-    rgba(0, 0, 0, 0.65) 100%
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(0, 0, 0, 0.1) 40%,
+    rgba(0, 0, 0, 0.55) 100%
   );
+}
+
+.hero-logo {
+  height: clamp(36px, 5vw, 52px);
+  width: auto;
+  margin-bottom: 24px;
+  opacity: 1;
+  filter: brightness(0) invert(1) drop-shadow(0 2px 20px rgba(0, 0, 0, 0.3));
 }
 
 .hero h1 {
@@ -898,7 +920,7 @@ main {
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 32px;
   text-align: center;
 }
@@ -916,6 +938,7 @@ main {
   font-weight: 700;
   color: #fff;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .stat-label {
@@ -1293,7 +1316,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0;
-  max-height: 340px;
+  max-height: 480px;
   overflow-y: auto;
 }
 
@@ -1362,6 +1385,205 @@ main {
   from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* ===================================================================
+   12c. Real Estate Enhanced
+   =================================================================== */
+
+.re-header {
+  margin-bottom: 48px;
+}
+
+.re-sectors {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+.re-sector {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  padding: 32px 24px;
+  transition: all 0.4s var(--ease-out-expo);
+}
+
+.re-sector:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.re-sector-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: var(--color-accent-light);
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+}
+
+.re-sector h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.re-sector p {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* Featured Deal Showcases */
+.re-featured {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+.re-featured-card-text {
+  background: linear-gradient(135deg, var(--color-primary) 0%, #3a3c35 100%);
+  border-color: transparent;
+}
+
+.re-featured-card-text .re-featured-info {
+  justify-content: center;
+  padding: 40px 32px;
+}
+
+.re-featured-card-text .re-featured-tag {
+  background: rgba(155,71,56,0.2);
+  color: var(--color-accent);
+}
+
+.re-featured-card-text h4 {
+  color: #fff;
+}
+
+.re-featured-card-text p {
+  color: rgba(255,255,255,0.75);
+}
+
+.re-featured-card-text .re-featured-meta span {
+  color: rgba(255,255,255,0.6);
+  border-bottom-color: rgba(255,255,255,0.15);
+}
+
+.re-featured-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  overflow: hidden;
+  transition: all 0.4s var(--ease-out-expo);
+}
+
+.re-featured-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.re-featured-img {
+  overflow: hidden;
+}
+
+.re-featured-img img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease-out-expo);
+}
+
+.re-featured-card:hover .re-featured-img img {
+  transform: scale(1.04);
+}
+
+.re-featured-info {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.re-featured-tag {
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  width: fit-content;
+}
+
+.re-featured-info h4 {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+
+.re-featured-info p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.re-featured-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.re-featured-meta span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+  padding: 4px 0;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+/* Deals Panel — Full Width & Larger */
+.deals-panel-full {
+  margin-top: 8px;
+}
+
+.deals-panel-full .deals-panel {
+  max-width: 100%;
+  padding: 32px;
+}
+
+.deals-panel-full .deals-panel-title {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.deals-panel-full .deals-list {
+  max-height: 600px;
+  column-count: 2;
+  column-gap: 32px;
+}
+
+.deals-panel-full .deals-list li {
+  break-inside: avoid;
+  padding: 10px 0;
+  font-size: 0.875rem;
+}
+
 
 /* ===================================================================
    13. Split Section
@@ -1592,33 +1814,331 @@ main {
 
 
 /* ===================================================================
-   15. Team Section
+   13b. Vision / Mehrwert Section
    =================================================================== */
 
-.team-countries {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  margin-top: 48px;
+.vision-section {
+  background-color: var(--color-bg);
 }
 
-.team-country-flag {
+.vision-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.vision-quote blockquote {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.vision-quote-text {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 2vw, 1.625rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-primary);
+  font-style: italic;
+  margin-bottom: 32px;
+}
+
+.vision-quote-author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.vision-author-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.vision-quote-author strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.vision-quote-author span {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.vision-content .section-title {
+  margin-bottom: 16px;
+}
+
+.vision-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin-bottom: 40px;
+}
+
+.vision-services {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.vision-service {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.vision-service-number {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  background: var(--color-accent-light);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin-bottom: 32px;
-  font-family: var(--font-heading);
-  font-size: 1.125rem;
-  font-weight: 600;
-  color: var(--color-primary);
-  letter-spacing: 0.02em;
+  flex-shrink: 0;
 }
 
-.team-grid-country {
+.vision-service h4 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.vision-service p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+
+/* ===================================================================
+   14b. Hotels Compact Cards
+   =================================================================== */
+
+.hotels-compact {
+  padding: 80px 0;
+}
+
+.hotels-compact .section-title {
+  margin-bottom: 32px;
+}
+
+.hotels-card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  margin-top: 8px;
+}
+
+.hotel-card {
+  display: block;
+  overflow: hidden;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  transition: all 0.4s var(--ease-out-expo);
+  text-decoration: none;
+  color: inherit;
+}
+
+.hotel-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  color: inherit;
+}
+
+.hotel-card-img {
+  overflow: hidden;
+}
+
+.hotel-card-img img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease-out-expo);
+}
+
+.hotel-card:hover .hotel-card-img img {
+  transform: scale(1.05);
+}
+
+.hotel-card-info {
+  padding: 20px 24px;
+}
+
+.hotel-card-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+.hotel-card-location {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+
+/* ===================================================================
+   14c. Serviced Apartments Compact
+   =================================================================== */
+
+.living-section-compact {
+  padding: 80px 0;
+}
+
+.living-section-compact .section-title {
+  margin-bottom: 32px;
+}
+
+.living-compact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.living-compact-cta {
+  margin-top: 32px;
+  text-align: center;
+}
+
+
+/* ===================================================================
+   14b. Team Quotes Section
+   =================================================================== */
+
+.team-quotes-section {
+  padding: 80px 0;
+}
+
+.team-quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.team-quote-card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-quote-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.team-quote-card blockquote {
+  margin: 0 0 24px;
+}
+
+.team-quote-card blockquote p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  font-style: italic;
+}
+
+.team-quote-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.team-quote-author img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-quote-author strong {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.team-quote-author span {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* --- Team Quotes Inline (within Real Estate section) --- */
+.team-quotes-inline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin: 64px 0 48px;
+}
+
+.team-quotes-inline .team-quote-card {
+  background: var(--color-surface);
+  border-left: 3px solid var(--color-accent);
+}
+
+@media (max-width: 1024px) {
+  .team-quotes-inline { gap: 24px; }
+}
+
+@media (max-width: 768px) {
+  .team-quotes-inline { grid-template-columns: 1fr; gap: 20px; }
+}
+
+@media (max-width: 480px) {
+  .team-quotes-inline { gap: 16px; }
+}
+
+/* ===================================================================
+   15. Team Section
+   =================================================================== */
+
+.team-row-founders {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-row-partners {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.team-flags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 4px 0 8px;
+}
+
+.team-flags svg {
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
 }
 
 .team-card {
@@ -2171,16 +2691,21 @@ textarea:focus-visible,
    =================================================================== */
 
 #about,
+#vision,
 #celebration,
-#hotels,
 #real-estate,
-#serviced-apartments,
 #team,
 #partners,
 #newsletter,
 .footer {
   content-visibility: auto;
   contain-intrinsic-size: auto 600px;
+}
+
+#hotels,
+#serviced-apartments {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 300px;
 }
 
 
@@ -2257,8 +2782,8 @@ textarea:focus-visible,
 @media (max-width: 1024px) {
   .nav { padding: 20px 24px; }
   .nav.scrolled { padding: 14px 24px; }
-  .nav-logo img { height: 52px; }
-  .nav.scrolled .nav-logo img { height: 44px; }
+  .nav-logo img { height: 44px; }
+  .nav.scrolled .nav-logo img { height: 38px; }
   .nav-links { gap: 24px; }
 
   .section, .section-alt { padding: 88px 0; }
@@ -2280,25 +2805,19 @@ textarea:focus-visible,
     gap: 32px;
   }
 
-  .hotel-showcase {
-    grid-template-columns: 1fr 1fr;
-    gap: 32px;
-  }
-  .hotel-showcase:nth-child(5) {
-    grid-template-columns: 1fr 1fr;
-  }
+  .re-sectors { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .hotels-card-grid { gap: 16px; }
+  .living-compact-grid { gap: 16px; }
 
+  .vision-layout { gap: 48px; }
   .split-section { gap: 48px; }
   .living-locations { grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .living-room-preview { gap: 32px; }
   .living-gallery-grid { grid-template-columns: 1fr 1fr; }
 
-  .team-countries {
-    gap: 32px;
-  }
-  .team-grid-country {
-    gap: 16px;
-  }
+  .team-quotes-grid { gap: 24px; }
+  .team-row-founders { gap: 16px; max-width: 480px; }
+  .team-row-partners { gap: 16px; }
 
   .partners-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -2345,8 +2864,8 @@ textarea:focus-visible,
     color: #fff;
   }
 
-  .nav-logo img { height: 48px; }
-  .nav.scrolled .nav-logo img { height: 40px; }
+  .nav-logo img { height: 36px; }
+  .nav.scrolled .nav-logo img { height: 32px; }
 
   .hero {
     min-height: 90vh;
@@ -2386,16 +2905,13 @@ textarea:focus-visible,
 
   .division-card { padding: 32px 24px; }
 
-  .hotel-showcase,
-  .hotel-showcase:nth-child(5) { grid-template-columns: 1fr; gap: 24px; }
+  .re-sectors { grid-template-columns: repeat(2, 1fr); }
+  .re-featured { grid-template-columns: 1fr; }
+  .deals-panel-full .deals-list { column-count: 1; }
+  .hotels-card-grid { grid-template-columns: 1fr; gap: 16px; }
+  .living-compact-grid { grid-template-columns: 1fr; gap: 16px; }
 
-  .hotel-showcase .hotel-info,
-  .hotel-showcase .hotel-slider,
-  .hotel-showcase:nth-child(5) .hotel-info,
-  .hotel-showcase:nth-child(5) .hotel-slider {
-    order: unset;
-  }
-
+  .vision-layout { grid-template-columns: 1fr; gap: 40px; }
   .split-section { grid-template-columns: 1fr; gap: 32px; }
   .split-section.reversed { direction: ltr; }
   .split-image { order: -1; }
@@ -2407,11 +2923,15 @@ textarea:focus-visible,
   .living-gallery-grid { grid-template-columns: 1fr; }
   .living-room-specs { flex-wrap: wrap; gap: 20px; }
 
-  .team-countries {
-    grid-template-columns: 1fr;
-    gap: 48px;
+  .team-quotes-grid { grid-template-columns: 1fr; gap: 20px; }
+  .team-quote-card { padding: 24px; }
+
+  .team-row-founders {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    max-width: 400px;
   }
-  .team-grid-country {
+  .team-row-partners {
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
   }
@@ -2448,12 +2968,22 @@ textarea:focus-visible,
   }
 
   .division-card { padding: 28px 20px; }
-  .hotel-gallery-thumbs { gap: 8px; }
+  .hotels-card-grid { grid-template-columns: 1fr; gap: 12px; }
+  .living-compact-grid { grid-template-columns: 1fr; gap: 12px; }
   .split-section { gap: 24px; }
 
   .living-showcase-overlay { padding: 20px; }
 
-  .team-grid-country {
+  .team-quotes-grid { gap: 16px; }
+  .team-quote-card { padding: 20px; }
+  .team-quote-card blockquote p { font-size: 0.95rem; }
+
+  .team-row-founders {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    max-width: 320px;
+  }
+  .team-row-partners {
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
   }

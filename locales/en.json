@@ -15,9 +15,9 @@
     "skip": "Skip to content"
   },
   "hero": {
-    "title": "Excellence in Real Estate & Hospitality",
-    "subtitle": "Amanthos Group combines premium real estate, exceptional hotels, and modern serviced apartments in Switzerland and Germany.",
-    "cta_hotels": "Discover Our Hotels",
+    "title": "Commercial Real Estate Services & Investments",
+    "subtitle": "Amanthos Group – strategic real estate development, investment advisory and hotel management in Switzerland and Germany.",
+    "cta_projects": "Our Projects",
     "cta_contact": "Get in Touch"
   },
   "about": {
@@ -54,7 +54,8 @@
     "hotels": "Hotels under Operations",
     "years": "Years of Accumulated Experience",
     "rooms": "Rooms & Apartments",
-    "deals": "Deals Closed"
+    "deals": "Deals Closed",
+    "area": "Brokered Space"
   },
   "celebration": {
     "label": "Anniversary",
@@ -107,6 +108,8 @@
       "Bachmann – Lease at Bleicherweg, Zurich",
       "Decathlon – Lease at Interlaken",
       "Fielmann – Lease at Interlaken",
+      "Changemaker – Badstrasse, Baden",
+      "BoConcept – Basel",
       "3 Leases in Amriville, Amriswil",
       "Various deals with Bestseller, Place B and other retailers"
     ],
@@ -118,7 +121,16 @@
       "Logistics property sale in Bavaria",
       "Contract for 4,400 m² warehouse space in Böblingen",
       "Duvenbeck – 12,000 m²",
-      "2,100 m² fitness space, Stuttgart"
+      "2,100 m² fitness space, Stuttgart",
+      "Eterna Park Nuremberg – Sale to Tishman",
+      "Müllerstraße 153, Berlin – Micro Living Conversion",
+      "Salzwiesenstraße 9, Stuttgart – Sale",
+      "Moninger Hof, Karlsruhe – Sale",
+      "BobW Frankfurt – Microliving Strategy",
+      "BobW Berlin – Microliving Strategy",
+      "Waldsiedlung Calw",
+      "Freiham North WA2 West, Munich",
+      "Glashütte Achern"
     ]
   },
   "serviced_apartments": {
@@ -143,8 +155,8 @@
   },
   "partners": {
     "label": "Partners",
-    "title": "Strong Partnerships",
-    "subtitle": "We collaborate with leading brands to offer our guests the best experience."
+    "title": "Partners & Investors",
+    "subtitle": "We collaborate with leading brands and investors to create sustainable value."
   },
   "team": {
     "label": "Our Team",

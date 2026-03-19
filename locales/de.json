@@ -15,9 +15,9 @@
     "skip": "Zum Inhalt springen"
   },
   "hero": {
-    "title": "Exzellenz in Immobilien & Gastfreundschaft",
-    "subtitle": "Amanthos Group vereint erstklassige Immobilien, aussergewöhnliche Hotels und moderne Serviced Apartments in der Schweiz und Deutschland.",
-    "cta_hotels": "Unsere Hotels entdecken",
+    "title": "Commercial Real Estate Services & Investments",
+    "subtitle": "Amanthos Group – strategische Immobilienentwicklung, Investmentberatung und Hotelmanagement in der Schweiz und Deutschland.",
+    "cta_projects": "Unsere Projekte",
     "cta_contact": "Kontakt aufnehmen"
   },
   "about": {
@@ -54,7 +54,8 @@
     "hotels": "Hotels unter Betrieb",
     "years": "Jahre gesammelte Erfahrung",
     "rooms": "Zimmer & Apartments",
-    "deals": "Abgeschlossene Deals"
+    "deals": "Abgeschlossene Deals",
+    "area": "Vermittelte Fläche"
   },
   "celebration": {
     "label": "Jubiläum",
@@ -107,6 +108,8 @@
       "Bachmann – Vermietung am Bleicherweg, Zürich",
       "Decathlon – Vermietung in Interlaken",
       "Fielmann – Vermietung in Interlaken",
+      "Changemaker – Badstrasse, Baden",
+      "BoConcept – Basel",
       "3 Vermietungen in Amriville, Amriswil",
       "Diverse Deals mit Bestseller, Place B und weiteren Retailern"
     ],
@@ -118,7 +121,16 @@
       "Logistikimmobilien-Verkauf in Bayern",
       "Vertrag über 4'400 m² Lagerfläche in Böblingen",
       "Duvenbeck – 12'000 m²",
-      "2'100 m² Fitnessfläche, Stuttgart"
+      "2'100 m² Fitnessfläche, Stuttgart",
+      "Eterna Park Nürnberg – Verkauf an Tishman",
+      "Müllerstraße 153, Berlin – Micro Living Conversion",
+      "Salzwiesenstraße 9, Stuttgart – Verkauf",
+      "Moninger Hof, Karlsruhe – Verkauf",
+      "BobW Frankfurt – Microliving Strategy",
+      "BobW Berlin – Microliving Strategy",
+      "Waldsiedlung Calw",
+      "Freiham North WA2 West, München",
+      "Glashütte Achern"
     ]
   },
   "serviced_apartments": {
@@ -143,8 +155,8 @@
   },
   "partners": {
     "label": "Partner",
-    "title": "Starke Partnerschaften",
-    "subtitle": "Wir arbeiten mit führenden Marken zusammen, um unseren Gästen das beste Erlebnis zu bieten."
+    "title": "Partner & Investoren",
+    "subtitle": "Wir arbeiten mit führenden Marken und Investoren zusammen, um nachhaltige Werte zu schaffen."
   },
   "team": {
     "label": "Unser Team",

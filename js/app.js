@@ -771,16 +771,22 @@
     for (var i = 0; i < headings.length; i++) {
       var el = headings[i];
       var text = el.textContent;
-      var words = text.split(' ');
+      var lines = text.split('\n').map(function(l) { return l.trim(); }).filter(function(l) { return l.length > 0; });
       el.innerHTML = '';
       el.classList.add('text-reveal-ready');
-      for (var j = 0; j < words.length; j++) {
-        var span = document.createElement('span');
-        span.className = 'text-reveal-word';
-        span.textContent = words[j];
-        span.style.transitionDelay = (j * 0.06) + 's';
-        el.appendChild(span);
-        if (j < words.length - 1) el.appendChild(document.createTextNode(' '));
+      var wordIndex = 0;
+      for (var li = 0; li < lines.length; li++) {
+        var words = lines[li].split(' ');
+        for (var j = 0; j < words.length; j++) {
+          var span = document.createElement('span');
+          span.className = 'text-reveal-word';
+          span.textContent = words[j];
+          span.style.transitionDelay = (wordIndex * 0.06) + 's';
+          el.appendChild(span);
+          if (j < words.length - 1) el.appendChild(document.createTextNode(' '));
+          wordIndex++;
+        }
+        if (li < lines.length - 1) el.appendChild(document.createElement('br'));
       }
     }
     if (!('IntersectionObserver' in window)) return;

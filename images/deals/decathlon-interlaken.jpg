@@ -1,0 +1,834 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Ups, diese Seite existiert leider nicht mehr!</title>
+    <meta name="title" content="Ups, diese Seite existiert leider nicht mehr!">
+    <meta name="csrf-token" content="">
+    <script>
+        var _sysConf = {
+            'formToken': 'https://www.neueroeffnung.info/token/?id=1775228932',
+        };
+    </script>
+    <!-- v280322 -->
+
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/app.css?id=df80f002590c97320481276f1007c96a" rel="stylesheet">
+
+            <script>
+                    </script>
+    
+    <script>
+/**
+ * Cookie Consent Cleanup Script
+ * Deletes analytics cookies when consent is revoked
+ */
+(function() {
+    'use strict';
+
+    /**
+     * Delete a cookie by name
+     * @param {string} name - Cookie name
+     * @param {string} path - Cookie path (default: '/')
+     * @param {string} domain - Cookie domain (optional)
+     */
+    function deleteCookie(name, path, domain) {
+        // Try to delete with current domain
+        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=' + (path || '/') + ';';
+        
+        // Also try with domain (for subdomain cookies like .neueroeffnung.info)
+        if (domain) {
+            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=' + (path || '/') + '; domain=' + domain + ';';
+        }
+        
+        // Try with leading dot
+        if (domain && !domain.startsWith('.')) {
+            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=' + (path || '/') + '; domain=.' + domain + ';';
+        }
+        
+        // Try without domain (current hostname)
+        const hostname = window.location.hostname;
+        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=' + (path || '/') + '; domain=' + hostname + ';';
+        
+        // Try with leading dot for hostname
+        if (hostname.includes('.')) {
+            const parts = hostname.split('.');
+            if (parts.length >= 2) {
+                const rootDomain = '.' + parts.slice(-2).join('.');
+                document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=' + (path || '/') + '; domain=' + rootDomain + ';';
+            }
+        }
+    }
+
+    /**
+     * Delete all Google Analytics cookies
+     * This function is only called when analytics consent is NOT given
+     */
+    function deleteAnalyticsCookies() {
+        // Get current domain
+        const hostname = window.location.hostname;
+        let rootDomain = null;
+        
+        // Extract root domain (e.g., neueroeffnung.info from local.neueroeffnung.info)
+        if (hostname.includes('.')) {
+            const parts = hostname.split('.');
+            if (parts.length >= 2) {
+                rootDomain = parts.slice(-2).join('.');
+            }
+        }
+
+        // Delete all cookies starting with _ga (includes UA and GA4 cookies)
+        // This removes all analytics cookies when user has not given consent
+        const allCookies = document.cookie.split(';');
+        allCookies.forEach(function(cookie) {
+            const cookieName = cookie.split('=')[0].trim();
+            // Delete all GA cookies: _ga, _ga_*, _gid, _gat
+            if (cookieName.startsWith('_ga')) {
+                deleteCookie(cookieName, '/', rootDomain);
+            }
+        });
+
+        // Delete Google Analytics cookies for common domains
+        const domains = rootDomain ? [rootDomain, '.' + rootDomain] : [];
+        
+        // Also try common GA cookie names (UA and GA4)
+        const gaCookies = ['_ga', '_gid', '_gat'];
+        domains.forEach(function(domain) {
+            gaCookies.forEach(function(cookieName) {
+                deleteCookie(cookieName, '/', domain);
+            });
+        });
+        
+        // Explicitly delete GA4 cookies (_ga_* pattern)
+        // Delete GA4 cookies when user has not given analytics consent
+        allCookies.forEach(function(cookie) {
+            const cookieName = cookie.split('=')[0].trim();
+            if (cookieName.match(/^_ga_[A-Z0-9]+$/)) {
+                domains.forEach(function(domain) {
+                    deleteCookie(cookieName, '/', domain);
+                });
+            }
+        });
+    }
+
+    /**
+     * Delete old Ezoic cookies (no longer used)
+     */
+    function deleteEzoicCookies() {
+        const hostname = window.location.hostname;
+        let rootDomain = null;
+        
+        if (hostname.includes('.')) {
+            const parts = hostname.split('.');
+            if (parts.length >= 2) {
+                rootDomain = parts.slice(-2).join('.');
+            }
+        }
+
+        // Ezoic cookies that should be deleted
+        const ezoicCookies = [
+            'ez-consent-tcf',
+            'ezosuibasgeneris-1',
+            'addtl_consent' // Google CMP cookie (might be from Ezoic integration)
+        ];
+
+        const domains = rootDomain ? [rootDomain, '.' + rootDomain, hostname] : [hostname];
+        
+        domains.forEach(function(domain) {
+            ezoicCookies.forEach(function(cookieName) {
+                deleteCookie(cookieName, '/', domain);
+            });
+        });
+    }
+
+    /**
+     * Disable Google Analytics if loaded
+     */
+    function disableGoogleAnalytics() {
+        // Disable Universal Analytics (ga) if it exists
+        if (typeof window.ga !== 'undefined') {
+            // Override ga to prevent tracking
+            window.ga = function() {
+                // Do nothing - prevent tracking
+            };
+        }
+
+        // Disable gtag if it exists (for GA4 compatibility)
+        if (typeof window.gtag !== 'undefined') {
+            // Override gtag to prevent tracking
+            window.gtag = function() {
+                // Do nothing - prevent tracking
+            };
+        }
+
+        // Clear dataLayer (for GA4)
+        if (typeof window.dataLayer !== 'undefined') {
+            window.dataLayer = [];
+        }
+
+        // Remove Google Analytics scripts (both UA and GA4)
+        const scripts = document.querySelectorAll('script[src*="googletagmanager.com"], script[src*="google-analytics.com"]');
+        scripts.forEach(function(script) {
+            script.remove();
+        });
+    }
+
+    /**
+     * Cleanup analytics when consent is revoked
+     */
+    window.cookieConsentCleanup = function() {
+        deleteAnalyticsCookies();
+        disableGoogleAnalytics();
+    };
+
+    /**
+     * Cleanup all non-necessary cookies (analytics + old Ezoic cookies)
+     */
+    window.cookieConsentCleanupAll = function() {
+        deleteAnalyticsCookies();
+        deleteEzoicCookies();
+        disableGoogleAnalytics();
+    };
+
+    // Auto-cleanup if no analytics consent
+        if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            cookieConsentCleanup();
+            deleteEzoicCookies(); // Also delete old Ezoic cookies
+        });
+    } else {
+        cookieConsentCleanup();
+        deleteEzoicCookies(); // Also delete old Ezoic cookies
+    }
+    })();
+</script>
+
+    
+    
+
+    <script>
+        window.siteLocale = 'de';
+    </script>
+
+    </head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-amber" style="border-bottom: 3px solid;">
+    <div class="container">
+        <a class="navbar-brand" href="https://www.neueroeffnung.info">
+                            <img class="fluid" src="https://www.neueroeffnung.info/images/logo.svg" width="176" height="53" alt="Logo">
+                        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.neueroeffnung.info/karte">Karte</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCategories" role="button"
+                       data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false" v-pre>
+                        Kategorien
+                    </a>
+                    <div class="dropdown-menu">
+                                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/branche/aerzte-gesundheit">
+                                                                                <i class="fa-solid fa-stethoscope me-2 category-icon"></i>
+                                                                                Ärzte &amp; Gesundheit
+                                </a>
+                                                                                                                <a class="dropdown-item" href="https://www.neueroeffnung.info/branche/baeckereien">
+                                                                                <i class="fa-solid fa-bread-slice me-2 category-icon"></i>
+                                                                                Bäckereien
+                                </a>
+                                                                                                                <a class="dropdown-item" href="https://www.neueroeffnung.info/branche/baumaerkte">
+                                                                                <i class="fa-solid fa-hammer me-2 category-icon"></i>
+                                                                                Baumärkte
+                                </a>
+                                                                                                                <a class="dropdown-item" href="https://www.neueroeffnung.info/branche/beauty">
+                                                                                <i class="fa-solid fa-spa me-2 category-icon"></i>
+                                                                                Beauty
+                                </a>
+                                                                                                                <a class="dropdown-item" href="https://www.neueroeffnung.info/branche/kitakindergarten">
+                                                                                <i class="fa-solid fa-school me-2 category-icon"></i>
+                                                                                Bildung &amp; Erziehung
+                                </a>
+                                                                                                                <a class="dropdown-item" href="https://www.neueroeffnung.info/branche/drogerie">
+                                                                                <i class="fa-solid fa-pump-soap me-2 category-icon"></i>
+                                                                                Drogerie
+                                </a>
+                                                                                                                <a class="dropdown-item" href="https://www.neueroeffnung.info/branche/einkaufszentrum">
+                                                                                <i class="fa-solid fa-store me-2 category-icon"></i>
+                                                                                Einkaufszentrum
+                                </a>
+                                                                                                                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/branche/freizeit">
+                                                                                <i class="fa-solid fa-futbol me-2 category-icon"></i>
+                                                                                Freizeit &amp; Sport
+                                </a>
+                                                                                                                <a class="dropdown-item" href="https://www.neueroeffnung.info/branche/gastronomie">
+                                                                                <i class="fa-solid fa-utensils me-2 category-icon"></i>
+                                                                                Gastronomie
+                                </a>
+                                                                                                                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/branche/hotel">
+                                                                                <i class="fa-solid fa-bed me-2 category-icon"></i>
+                                                                                Hotels &amp; Unterkünfte
+                                </a>
+                                                                                                                <a class="dropdown-item" href="https://www.neueroeffnung.info/branche/mode">
+                                                                                <i class="fa-solid fa-tshirt me-2 category-icon"></i>
+                                                                                Mode
+                                </a>
+                                                                                                                <a class="dropdown-item" href="https://www.neueroeffnung.info/branche/non-food-discounter">
+                                                                                <i class="fa-solid fa-percent me-2 category-icon"></i>
+                                                                                Non-Food-Discounter
+                                </a>
+                                                                                                                <a class="dropdown-item" href="https://www.neueroeffnung.info/branche/dienstleistung">
+                                                                                <i class="fa-solid fa-handshake me-2 category-icon"></i>
+                                                                                Service &amp; Dienstleistung
+                                </a>
+                                                                                                                <a class="dropdown-item" href="https://www.neueroeffnung.info/branche/shops">
+                                                                                <i class="fa-solid fa-tags me-2 category-icon"></i>
+                                                                                Shops &amp; Läden
+                                </a>
+                                                                                                                <a class="dropdown-item" href="https://www.neueroeffnung.info/branche/supermaerkte">
+                                                                                <i class="fa-solid fa-shopping-cart me-2 category-icon"></i>
+                                                                                Supermärkte &amp; Discounter
+                                </a>
+                                                                            
+                        <!-- Gerüchte-Kategorie separat am Ende -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-muted" href="https://www.neueroeffnung.info/branche/geruechte" style="opacity: 0.85;">
+                                    <i class="fa-solid fa-comment-dots me-2 category-icon"></i>
+                                    Gerüchte
+                                </a>
+                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCities" role="button"
+                       data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false" v-pre>
+                        Städte
+                    </a>
+                    <div class="dropdown-menu featured-cities-dropdown-menu" aria-labelledby="navbarDropdownCities">
+                        <div class="row">
+                            <div class="col-6">
+                                                                    <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/aachen">Aachen</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/augsburg">Augsburg</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/berlin">Berlin</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/bielefeld">Bielefeld</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/bochum">Bochum</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/bonn">Bonn</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/braunschweig">Braunschweig</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/bremen">Bremen</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/chemnitz">Chemnitz</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/dortmund">Dortmund</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/dresden">Dresden</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/duisburg">Duisburg</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/d%C3%BCsseldorf">Düsseldorf</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/essen">Essen</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/frankfurt%20am%20Main">Frankfurt a. Main</a>
+                                                                </div>
+                            <div class="col-6">
+                                                                                                    <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/gelsenkirchen">Gelsenkirchen</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/hamburg">Hamburg</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/hannover">Hannover</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/karlsruhe">Karlsruhe</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/kiel">Kiel</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/k%C3%B6ln">Köln</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/leipzig">Leipzig</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/mannheim">Mannheim</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/m%C3%B6nchengladbach">Mönchengladbach</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/m%C3%BCnchen">München</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/m%C3%BCnster">Münster</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/n%C3%BCrnberg">Nürnberg</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/stuttgart">Stuttgart</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/wiesbaden">Wiesbaden</a>
+                                                                                                        <a class="dropdown-item"
+                                       href="https://www.neueroeffnung.info/stadt/wuppertal">Wuppertal</a>
+                                                                                                </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCorporations" role="button"
+                       data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false" v-pre>
+                        Unternehmen
+                    </a>
+                    <div class="dropdown-menu featured-cities-dropdown-menu" aria-labelledby="navbarDropdownCorporations" style="min-width: 600px; max-width: 100vw; width: 100%;">
+                        <style>
+                            @media (max-width: 767px) {
+                                .featured-cities-dropdown-menu {
+                                    min-width: auto !important;
+                                    width: 100% !important;
+                                }
+                            }
+                        </style>
+                        <div class="row">
+                                                        <div class="col-12 col-md-4">
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/action">ACTION</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/aldi">ALDI</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/bauhaus">BAUHAUS</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/burger-king">Burger King</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/decathlon">Decathlon</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/deichmann">DEICHMANN</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/denner">Denner</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/dm-drogerie">dm - drogerie markt</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/edeka">EDEKA</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/ernstings-family">Ernsting&#039;s family</a>
+                                                            </div>
+                            <div class="col-12 col-md-4">
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/jysk">JYSK</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/kaufland">Kaufland</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/kfc">KFC</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/lidl">Lidl</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/mcdonald">McDonald&#039;s</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/m%C3%BCller%20drogerie">MÜLLER Drogeriemarkt</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/netto">Netto</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/norma">NORMA</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/obi">Obi</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/penny">Penny</a>
+                                                            </div>
+                            <div class="col-12 col-md-4">
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/poco">POCO</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/rewe">REWE</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/rossmann">ROSSMANN</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/sephora">Sephora</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/takko">Takko</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/tedi">TEDi</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/thalia">Thalia</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/tk-maxx">TK Maxx</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/woolworth">Woolworth</a>
+                                                                    <a class="dropdown-item" href="https://www.neueroeffnung.info/unternehmen/wreesmann">WREESMANN</a>
+                                                            </div>
+                        </div>
+                    </div>
+                </li>
+                                                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.neueroeffnungsdaten.de/" target="_blank">
+                            <i class="fas fa-database" style="color: #FBB129;"></i>
+                            Premium-Daten
+                            <span class="sr-only">Premium-Daten</span>
+                        </a>
+                    </li>
+                                <li class="nav-item new-entry-button">
+                    <a class="btn btn-primary col" href="https://www.neueroeffnung.info/entries/create">
+                        Neueröffnung melden
+                    </a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mt-2 mt-md-0">
+                            </ul>
+            <div class="d-block d-sm-none">
+                <form class="mt-4" action="https://www.neueroeffnung.info/suche" method="POST">
+                    <input type="hidden" name="_token" value="">
+                    <div class="form-row justify-content-center">
+                        <div class="col-md-6">
+                            <input name="search_query"
+                                   class="form-control " type="text"
+                                   placeholder="Suche nach einem Geschäft, einer Postleitzahl oder einem Ort"></input>
+                            <div class="invalid-feedback">
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-2 mt-2 mt-md-0">
+                            <button class="btn btn-outline-primary col">
+                                <i class="fas fa-search" style="margin-right: 4px;"></i>Suchen
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container search-form-container" style="background-color: white;">
+    <div class="d-none d-sm-block">
+        <div class="row">
+            <div class="col-md-12">
+                <form class="mt-4" action="https://www.neueroeffnung.info/suche" method="POST">
+                    <input type="hidden" name="_token" value="">
+                    <div class="form-row justify-content-center">
+                        <div class="col-md-6">
+                            <input name="search_query"
+                                   class="form-control " type="text"
+                                   placeholder="Suche nach einem Geschäft, einer Postleitzahl oder einem Ort"></input>
+                            <div class="invalid-feedback">
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-2 mt-2 mt-md-0">
+                            <button class="btn btn-outline-primary col">
+                                <i class="fas fa-search" style="margin-right: 4px;"></i>Suchen
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+
+<main role="main" class="container bg-white pt-4">
+    <div class="row">
+        <div class="col">
+                <div class="row justify-content-center featured-entries">
+        <div class="col-12 d-flex justify-content-center my-4">
+            <div>Ups, diese Seite existiert leider nicht mehr!</div>
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <div class="w-50"><img class="img-fluid" src="/images/neueroeffnung/closed.png"></div>
+        </div>
+    </div>
+        </div>
+    </div>
+
+</main>
+
+<footer class="bg-dark text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 my-4">
+                <div class="my-1"><strong>Über Neueroeffnung.info</strong></div>
+                <div class="text">
+                    Neueroeffnung.info ist das <strong>größte Portal für Neu- und Wiedereröffnungen in Deutschland, Österreich und der Schweiz</strong>. Wir veröffentlichen und aktualisieren jeden Monat tausende Neueröffnungen und Wiedereröffnungen, über 180.000 Neueröffnungen insgesamt.
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12 my-4">
+                <div class="my-1">Informationen</div>
+                <div class="text">
+
+                </div>
+                <ul class="list-inline">
+
+                                            <li class="list-inline-item">
+                            <a href="https://www.neueroeffnung.info/ueber-uns">Über Uns</a>
+                        </li>
+                        <li class="list-inline-item">|</li>
+                        <li class="list-inline-item">
+                            <a href="https://www.neueroeffnung.info/geschaeftsinhaber">Geschäftsinhaber</a>
+                        </li>
+                        <li class="list-inline-item">|</li>
+                        <li class="list-inline-item">
+                            <a href="https://www.neueroeffnungsdaten.de/">B2B</a>
+                        </li>
+                        <li class="list-inline-item">|</li>
+                    
+                                        
+                    <li class="list-inline-item">
+                        <a href="https://www.neueroeffnung.info/kontakt_formular">Kontakt</a>
+                    </li>
+                    <li class="list-inline-item">|</li>
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.neueroeffnung.info/nutzungsbedingungen">Nutzungsbedingungen</a>
+                    </li>
+                    <li class="list-inline-item">|</li>
+                    
+                    <li class="list-inline-item">
+                        <a href="https://www.neueroeffnung.info/datenschutz">Datenschutz</a>
+                    </li>
+                    <li class="list-inline-item">|</li>
+                    <li class="list-inline-item">
+                        <a href="https://www.neueroeffnung.info/cookie-einstellungen">Cookie-Einstellungen</a>
+                    </li>
+                    
+                                            <li class="list-inline-item">|</li>
+                        <li class="list-inline-item">
+                            <a href="https://www.neueroeffnung.info/impressum">Impressum</a>
+                        </li>
+                                        
+                                            <li class="list-inline-item">|</li>
+                        <li class="list-inline-item">
+                            <a href="https://www.neueroeffnung.info/login">Anmelden</a>
+                        </li>
+                                        
+                                        
+                                    </ul>
+            </div>
+        </div>
+            </div>
+</footer>
+<div id="cookie-consent-banner" class="cookie-consent-banner" style="display: none;" data-consent-check="pending">
+    <div class="cookie-consent-content">
+        <div class="cookie-consent-text">
+            <h5>Cookie-Einstellungen</h5>
+            <p>Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung zu bieten. Einige Cookies sind notwendig für den Betrieb der Website, andere helfen uns, diese Website und die Nutzererfahrung zu verbessern (Tracking-Cookies). Sie können Ihre Einwilligung jederzeit widerrufen.</p>
+            <p class="small">
+                <a href="https://www.neueroeffnung.info/datenschutz" target="_blank">Mehr erfahren</a>
+            </p>
+        </div>
+        <div class="cookie-consent-buttons">
+            <a href="https://www.neueroeffnung.info/cookie-einstellungen" class="btn btn-sm btn-outline-secondary">
+                Einstellungen
+            </a>
+            <button type="button" class="btn btn-sm btn-primary" data-consent="all">
+                Alle akzeptieren
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+.cookie-consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 2px solid #000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    z-index: 9999;
+    padding: 20px;
+}
+
+.cookie-consent-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.cookie-consent-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.cookie-consent-text h5 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.cookie-consent-text p {
+    margin: 0 0 5px 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.cookie-consent-buttons {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .cookie-consent-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cookie-consent-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .cookie-consent-buttons button {
+        flex: 1;
+    }
+}
+</style>
+
+<script>
+(function() {
+    // Check localStorage FIRST, before even getting the banner element
+    // This prevents the banner from flashing on screen
+    const consentGiven = localStorage.getItem('cookie_consent_given');
+    if (consentGiven === 'true') {
+        // Consent was given, don't show banner at all
+        const banner = document.getElementById('cookie-consent-banner');
+        if (banner) {
+            banner.style.display = 'none';
+            banner.remove(); // Remove from DOM completely
+        }
+        return;
+    }
+
+    const banner = document.getElementById('cookie-consent-banner');
+    if (!banner) return;
+
+    // Show banner after a short delay
+    setTimeout(function() {
+        // Double-check localStorage before showing (in case it was set in the meantime)
+        if (localStorage.getItem('cookie_consent_given') !== 'true') {
+            banner.style.display = 'block';
+        }
+    }, 500);
+
+    // Handle consent buttons
+    banner.querySelectorAll('[data-consent]').forEach(function(button) {
+        button.addEventListener('click', function() {
+            const consent = this.getAttribute('data-consent');
+            
+            // Hide banner immediately
+            banner.style.display = 'none';
+            
+            // Mark consent as given in localStorage (fallback)
+            localStorage.setItem('cookie_consent_given', 'true');
+            
+            fetch('https://www.neueroeffnung.info/cookie-consent', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                },
+                body: JSON.stringify({ consent: consent })
+            })
+            .then(response => {
+                // Check if response is actually JSON
+                const contentType = response.headers.get('content-type');
+                if (contentType && contentType.includes('application/json')) {
+                    return response.json();
+                } else {
+                    // If not JSON, try to parse as text to see what we got
+                    return response.text().then(text => {
+                        console.error('Expected JSON but got:', text.substring(0, 200));
+                        throw new Error('Server returned non-JSON response');
+                    });
+                }
+            })
+            .then(data => {
+                if (data && data.success) {
+                    // If only necessary cookies selected, cleanup analytics and old Ezoic cookies
+                    if (consent === 'necessary') {
+                        if (typeof window.cookieConsentCleanup === 'function') {
+                            window.cookieConsentCleanup();
+                        }
+                        if (typeof window.cookieConsentCleanupAll === 'function') {
+                            window.cookieConsentCleanupAll();
+                        }
+                        window.location.reload();
+                        return;
+                    }
+                    
+                    // If analytics consent was given, initialize it
+                    if (consent === 'all' || 
+                        consent === 'analytics') {
+                                                // Initialize analytics immediately
+                        (function() {
+    var trackingId = 'UA-4876818-32';
+    var anonymizeIp = true;
+    
+    // Load Universal Analytics script
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    // Initialize analytics
+    ga('create', trackingId, 'auto');
+    ga('set', 'anonymizeIp', anonymizeIp);
+    ga('send', 'pageview');
+})();
+                        
+                        // Wait a bit for analytics to initialize, then reload
+                        setTimeout(function() {
+                            window.location.reload();
+                        }, 500);
+                                                return;
+                    }
+                    
+                    // Default: reload page
+                    window.location.reload();
+                } else {
+                    // If save failed, show banner again
+                    banner.style.display = 'block';
+                    localStorage.removeItem('cookie_consent_given');
+                }
+            })
+            .catch(error => {
+                console.error('Error saving cookie consent:', error);
+                // If error occurred, show banner again
+                banner.style.display = 'block';
+                localStorage.removeItem('cookie_consent_given');
+                
+                // Show user-friendly error message
+                alert('Fehler beim Speichern der Cookie-Einstellungen. Bitte versuchen Sie es erneut.');
+            });
+        });
+    });
+    
+    // Clean up localStorage flag if cookie is actually set (to keep them in sync)
+    // Check immediately and after a delay to catch cookies set during page load
+    function syncConsentFlag() {
+        const cookieValue = document.cookie.match(/cookie_consent=([^;]+)/);
+        if (cookieValue && cookieValue[1] && cookieValue[1] !== 'none') {
+            // Cookie is set, keep localStorage flag and hide banner
+            localStorage.setItem('cookie_consent_given', 'true');
+            if (banner) {
+                banner.style.display = 'none';
+            }
+        } else {
+            // Cookie not set, remove localStorage flag
+            localStorage.removeItem('cookie_consent_given');
+        }
+    }
+    
+    // Check immediately
+    syncConsentFlag();
+    
+    // Check again after a short delay (in case cookie is set asynchronously)
+    setTimeout(syncConsentFlag, 100);
+    setTimeout(syncConsentFlag, 500);
+    setTimeout(syncConsentFlag, 1000);
+})();
+</script>
+
+
+<script src="/js/app.js?id=91aa5ea83bc31a0271022a8b09a19be1"></script>
+
+
+</body>
+</html>
+
+

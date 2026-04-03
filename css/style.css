@@ -2201,6 +2201,14 @@ main {
   font-size: 0.6875rem;
   color: var(--color-accent);
   font-weight: 500;
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.team-track-record {
+  font-size: 0.6875rem;
+  color: var(--color-text-light);
+  font-style: italic;
   margin-bottom: 8px;
   line-height: 1.4;
 }

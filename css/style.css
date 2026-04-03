@@ -2206,11 +2206,21 @@ main {
 }
 
 .team-track-record {
-  font-size: 0.6875rem;
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.team-track-record li {
+  font-size: 0.625rem;
   color: var(--color-text-light);
-  font-style: italic;
-  margin-bottom: 8px;
   line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
 }
 
 .team-email {
